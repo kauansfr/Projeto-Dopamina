@@ -1,0 +1,114 @@
+* {
+    padding: 0rem;
+    margin: 0rem;
+}
+
+.body {
+    margin: 0rem;
+    height: 100%;
+}
+
+/* -------------------- Header -------------------- */
+
+.box_header {
+    display: flex;
+    height: 3em;
+    justify-content: center;
+    border-bottom: 2px solid #000000;
+}
+
+.box_text {
+    display: flex;
+    align-items: center;
+}
+
+.nav_text {
+    display: flex;
+    flex-direction: row;
+}
+
+.txt1, .txt2, .txt3 {
+    display: flex;
+    text-decoration: none;
+    width: 100px;
+    justify-content: center;
+}
+
+/* -------------------- Primeira Main -------------------- */
+
+.box_dopamina {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 18rem;
+    left: -10rem;
+    transition: left 1s;
+}
+
+.box_dopamina {
+    transition: transform 1.5s ease;
+}
+
+.div_dopamina {
+    border: 10px solid grey;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    } 10% {
+        transform: scale(1.02);
+    } 20% {
+        transform: scale(1.04);
+    } 30% {
+        transform: scale(1.06);
+    } 40% {
+        transform: scale(1.08);
+    } 50% {
+        transform: scale(1.1);
+    } 60% {
+        transform: scale(1.08);
+    } 70% {
+        transform: scale(1.06);
+    } 80% {
+        transform: scale(1.04)
+    } 90% {
+        transform: scale(1.02)
+    } 100% {
+        transform: scale(1)
+    }
+
+}
+
+.container_main {
+    background-image: url(./assets/images/background-items.png);
+}
+
+.section_brain {
+    display: flex;
+    justify-content: center;
+}
+
+.brain_img {
+    animation: pulse 1235ms infinite;
+    cursor: pointer;
+    position: relative;
+    top: 100px;
+    height: 450px;
+    z-index: 1;
+}
+
+/* -------------------- Aside Informativo -------------------- */
+
+.aside_informativo1 {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    position: relative;
+    top: 25rem;
+}
+
+.titulo1, .paragrafo1 {
+    display: flex;
+    color: #FFFFFF;
+}
