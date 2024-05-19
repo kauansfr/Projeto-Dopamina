@@ -3,18 +3,41 @@
     margin: 0rem;
 }
 
-.body {
+body::-webkit-scrollbar {
+    margin: -1px;
+    width: 2px;
+}
+
+body::-webkit-scrollbar:hover {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: grey;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #FFFFFF;
+}
+
+body {
     margin: 0rem;
     height: 100%;
+    /* background-image: url(./assets/images/background-textura.jpg); */
+    /* background-size: cover; */
 }
 
 /* -------------------- Header -------------------- */
 
 .box_header {
     display: flex;
-    height: 3em;
+    position: fixed;
+    height: 3rem;
+    width: 100%;
     justify-content: center;
     border-bottom: 2px solid #000000;
+    background-color: #FFFFFF;
+    z-index: 2;
 }
 
 .box_text {
@@ -43,6 +66,7 @@
     bottom: 18rem;
     left: -10rem;
     transition: left 1s;
+    z-index: 2;
 }
 
 .box_dopamina {
@@ -50,7 +74,17 @@
 }
 
 .div_dopamina {
-    border: 10px solid grey;
+    border: 3px solid grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25rem;
+    height: 3rem;
+}
+
+.div_dopamina p {
+    font-size: 20px;
+    font-weight: bold;
 }
 
 @keyframes pulse {
@@ -82,6 +116,10 @@
 
 .container_main {
     background-image: url(./assets/images/background-items.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
 }
 
 .section_brain {
@@ -93,22 +131,23 @@
     animation: pulse 1235ms infinite;
     cursor: pointer;
     position: relative;
-    top: 100px;
+    top: 150px;
     height: 450px;
     z-index: 1;
 }
 
 /* -------------------- Aside Informativo -------------------- */
 
-.aside_informativo1 {
+/* .aside_informativo1 {
     display: flex;
     flex-direction: column;
-    background-color: black;
     position: relative;
     top: 25rem;
+    height: 100%;
+    background: linear-gradient(0deg, blue, green 40%, red);
 }
 
 .titulo1, .paragrafo1 {
     display: flex;
     color: #FFFFFF;
-}
+} */
