@@ -57,10 +57,10 @@ body {
     justify-content: center;
 }
 
-/* -------------------- Primeira Main -------------------- */
+/* -------------------- Primeira Div -------------------- */
 
 .box_dopamina {
-    display: flex;
+    display: none;
     justify-content: center;
     position: relative;
     bottom: 18rem;
@@ -70,7 +70,67 @@ body {
 }
 
 .box_dopamina {
-    transition: transform 1.5s ease;
+    transition: transform 2s ease;
+}
+
+.div_dopamina {
+    border: 3px solid grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25rem;
+    height: 3rem;
+}
+
+.div_dopamina p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* -------------------- Segunda Div -------------------- */
+
+.box_atividadeFisica {
+    display: none;
+    justify-content: center;
+    position: relative;
+    bottom: 18rem;
+    left: -10rem;
+    transition: left 1s;
+    z-index: 2;
+}
+
+.box_atividadeFisica {
+    transition: transform 2s ease;
+}
+
+.div_atividadeFisica {
+    border: 3px solid grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25rem;
+    height: 3rem;
+}
+
+.div_atividadeFisica p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* -------------------- Terceira Div -------------------- */
+
+.box_dopamina {
+    display: none;
+    justify-content: center;
+    position: relative;
+    bottom: 18rem;
+    left: -10rem;
+    transition: left 1s;
+    z-index: 2;
+}
+
+.box_dopamina {
+    transition: transform 2s ease;
 }
 
 .div_dopamina {

@@ -1,0 +1,109 @@
+* {
+    padding: 0rem;
+    margin: 0rem;
+}
+
+/* -------------------- Header -------------------- */
+
+.box_header {
+    display: flex;
+    position: fixed;
+    height: 3rem;
+    width: 100%;
+    justify-content: center;
+    border-bottom: 2px solid #000000;
+    background-color: #FFFFFF;
+    z-index: 2;
+}
+
+.box_text {
+    display: flex;
+    align-items: center;
+}
+
+.nav_text {
+    display: flex;
+    flex-direction: row;
+}
+
+.txt1,
+.txt2,
+.txt3 {
+    display: flex;
+    text-decoration: none;
+    width: 100px;
+    justify-content: center;
+}
+
+.container_login {
+    display: flex;
+    justify-content: center;
+}
+
+.box_login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 7rem;
+    width: 500px;
+    height: 550px;
+    border: 3px solid #000000;
+    border-radius: 10px;
+}
+
+.div_tituloLogin h1,
+#titulo {
+    text-align: center;
+    position: relative;
+    top: 50px;
+    padding: 10px;
+}
+
+.box_input {
+    display: flex;
+    justify-content: center;
+    padding: 60px;
+    width: 100%;
+}
+
+.div_input1 {
+    display: flex;
+    flex-direction: column;
+}
+
+#input_login {
+    width: 350px;
+    height: 10px;
+}
+
+#titulo_input,
+#input_login {
+    position: relative;
+    top: 10px;
+    padding-bottom: 12px;
+    padding-top: 16px;
+}
+
+.box_buttonLogin {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+#button_login {
+    position: relative;
+    top: -5px;
+    text-align: center;
+    height: 40px;
+    width: 250px;
+    border-radius: 4px;
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+#naoTemUmaConta {
+    text-align: center;
+    padding-top: 16px;
+}
