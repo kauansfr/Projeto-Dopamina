@@ -89,18 +89,25 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-top: 50px;
+    padding-top: 40px;
 }
 
 #button_login {
     position: relative;
     top: -5px;
     text-align: center;
-    height: 40px;
+    font-size: 15px;
+    height: 50px;
     width: 250px;
     border-radius: 4px;
     background-color: #000000;
     color: #FFFFFF;
+}
+
+#button_login:hover {
+    background-color: #FFFFFF;
+    border: 3px solid #000000;
+    color: #000000;
 }
 
 #naoTemUmaConta {

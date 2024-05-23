@@ -26,7 +26,9 @@
     flex-direction: row;
 }
 
-.txt1, .txt2, .txt3 {
+.txt1,
+.txt2,
+.txt3 {
     display: flex;
     text-decoration: none;
     width: 100px;
@@ -50,7 +52,8 @@
     border-radius: 10px;
 }
 
-.div_tituloCadastro h1, #titulo {
+.div_tituloCadastro h1,
+#titulo {
     position: relative;
     top: 50px;
     padding: 10px;
@@ -75,7 +78,8 @@
     height: 10px;
 }
 
-#titulo_input, #input_cadastro {
+#titulo_input,
+#input_cadastro {
     padding-bottom: 12px;
     padding-top: 16px;
 }
@@ -89,11 +93,19 @@
 
 #button_cadastro {
     text-align: center;
+    font-weight: bold;
+    font-size: 14px;
     height: 40px;
     width: 250px;
     border-radius: 4px;
     background-color: #000000;
     color: #FFFFFF;
+}
+
+#button_cadastro:hover {
+    background-color: #FFFFFF;
+    border: 3px solid #000000;
+    color: #000000;
 }
 
 #jaTemUmaConta {

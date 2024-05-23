@@ -28,7 +28,7 @@ body {
 
 /* -------------------- Header -------------------- */
 
-.box_login {
+.box_header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -38,8 +38,27 @@ body {
     background-color: #FFFFFF;
     z-index: 2;
 }
+/* 
+.esconderLogin {
+    background-color: #FFFFFF;
+    position: relative;
+    height: 40px;
+    right: 1px;
+    width: 400px;
+    z-index: 1;
+} */
 
+/* #id_button {
+    position: relative;
+    right: 60px;
+    width: 100px;
+    height: 30px;
+} */
+.a {
+    
+}
 #id_button {
+    /* display: conte; */
     background-color: #FFFFFF;
     position: relative;
     height: 34px;
@@ -48,12 +67,7 @@ body {
     font-weight: 600;
     width: 125px;
     cursor: pointer;
-    transform: skew(-4deg);
-    transform: translateX(200%);
-}
-
-#id_button {
-    transition: transform 2.5s ease;
+    transform: skew(-10deg);
 }
 
 #id_button::before {
@@ -140,8 +154,8 @@ body {
     justify-content: center;
     position: relative;
     bottom: 18.5rem;
-    transition: left 1s;
     left: -5rem;
+    transition: left 1s;
     z-index: 2;
 }
 
@@ -188,7 +202,7 @@ body {
     position: relative;
     bottom: 18rem;
     right: -15rem;
-    transition: right 1s;
+    transition: left 1s;
     z-index: 2;
     width: 70rem;
 }
@@ -279,9 +293,9 @@ body {
     display: none;
     justify-content: center;
     position: relative;
-    bottom: 17rem;
+    bottom: 17.2rem;
     right: -15rem;
-    transition: right 1s;
+    transition: left 1s;
     z-index: 2;
     width: 40rem;
 }
