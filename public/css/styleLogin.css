@@ -3,37 +3,52 @@
     margin: 0rem;
 }
 
+body {
+    background-image: url(../assets/images/background-items.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
 /* -------------------- Header -------------------- */
 
-.box_header {
+header {
     display: flex;
-    position: fixed;
-    height: 3rem;
-    width: 100%;
-    justify-content: center;
-    border-bottom: 2px solid #000000;
-    background-color: #FFFFFF;
-    z-index: 2;
-}
-
-.box_text {
-    display: flex;
+    justify-content: space-between;
     align-items: center;
+    height: 5rem;
 }
 
-.nav_text {
-    display: flex;
-    flex-direction: row;
+.box_logo {
+    position: relative;
+    left: 8rem;
 }
 
-.txt1,
-.txt2,
-.txt3 {
-    display: flex;
+.nav_menu {
+    position: relative;
+    right: 10rem;
+    transition: 0.45s;
+}
+
+.nav_menu:hover {
+    transition: 0.45s;
+    transform: scale(1.05);
+}
+
+.nav_menu a {
+    margin: 30px;
     text-decoration: none;
-    width: 100px;
-    justify-content: center;
+    color: #000000;
+    transition: 0.5s;
 }
+
+.nav_menu a:hover {
+    border-bottom: 1px solid #000000;
+    transition: 0.5s;
+    color: #000000;
+}
+
+/* -------------------- FIM Header -------------------- */
 
 .container_login {
     display: flex;
@@ -45,7 +60,7 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    top: 7rem;
+    top: 2.5rem;
     width: 500px;
     height: 550px;
     border: 3px solid #000000;
@@ -72,17 +87,20 @@
     flex-direction: column;
 }
 
-#input_login {
+#input_email,
+#input_senha {
     width: 350px;
     height: 10px;
 }
 
 #titulo_input,
-#input_login {
+#input_email,
+#input_senha {
     position: relative;
     top: 10px;
     padding-bottom: 12px;
     padding-top: 16px;
+    border-radius: 10px 10px;
 }
 
 .box_buttonLogin {
@@ -93,21 +111,25 @@
 }
 
 #button_login {
-    position: relative;
-    top: -5px;
     text-align: center;
     font-size: 15px;
-    height: 50px;
-    width: 250px;
-    border-radius: 4px;
+    font-weight: bold;
+    position: relative;
+    top: -5px;
+    height: 40px;
+    width: 230px;
+    border-radius: 4px 10px;
     background-color: #000000;
     color: #FFFFFF;
+    transition: 0.65s;
 }
 
 #button_login:hover {
     background-color: #FFFFFF;
     border: 3px solid #000000;
     color: #000000;
+    transition: 0.7s;
+    transform: scale(1.05);
 }
 
 #naoTemUmaConta {

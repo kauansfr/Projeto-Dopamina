@@ -1,0 +1,64 @@
+-=======================--HTML--=====================
+
+<header>
+        <div class="box_logo">
+            LOGO
+        </div>
+
+        <nav class="nav_menu">
+            <a id="id_home" href="./home.html">Home</a>
+            <a id="id_dopamina" href="#">Dopamina</a>
+            <a id="id_atvFisica" href="#">Atv. Física</a>
+            <a id="id_rotina" href="#">Rotina</a>
+            <a id="id_sobreMim" href="#">Sobre Mim</a>
+        </nav>
+</header>
+
+=========================--CSS--=======================
+
+body {
+    background-image: url(../assets/images/background-items.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+} 
+
+/* -------------------- Header -------------------- */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+}
+
+.box_logo {
+    position: relative;
+    left: 8rem;
+}
+
+.nav_menu {
+    position: relative;
+    right: 10rem;
+    transition: 0.45s;
+}
+
+.nav_menu:hover {
+    transition: 0.45s;
+    transform: scale(1.05);
+}
+
+.nav_menu a {
+    margin: 30px;
+    text-decoration: none;
+    color: #000000;
+    transition: 0.5s;
+}
+
+.nav_menu a:hover {
+    border-bottom: 1px solid #000000;
+    transition: 0.5s;
+    color: #000000;
+}
+
+/* -------------------- FIM Header -------------------- */

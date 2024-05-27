@@ -1,0 +1,48 @@
+/* -------------------- Header -------------------- */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+}
+
+.box_logo {
+    position: relative;
+    /* align-items: center; */
+    left: 8rem;
+}
+
+.nav_menu {
+    position: relative;
+    right: -10rem;
+}
+
+.nav_menu a {
+    margin: 30px;
+    text-decoration: none;
+    color: #000000;
+
+}
+
+.box_logout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    right: 4rem;
+}
+
+#icon_logout {
+    cursor: pointer;
+    height: 25px;
+    width: 30px;
+}
+
+#text_logout {
+    text-decoration: none;
+    color: #000000;
+    font-size: 15px;
+}
+
+/* -------------------- FIM Header -------------------- */

@@ -1,10 +1,10 @@
-    const cerebro = document.querySelector('.brain_img');
-    const dopamina = document.querySelector('.box_dopamina');
-    const atividadeFisica = document.querySelector('.box_atividadeFisica');
-    const rotina = document.querySelector('.box_controleRotina');
-    const sobreMim = document.querySelector('.box_sobreMim');
-    const esconderLogin = document.querySelector('.esconderLogin');
-    const buttonLogin = document.getElementById('id_button');
+const cerebro = document.querySelector('.brain_img');
+const dopamina = document.querySelector('.box_dopamina');
+const atividadeFisica = document.querySelector('.box_atividadeFisica');
+const rotina = document.querySelector('.box_controleRotina');
+const sobreMim = document.querySelector('.box_sobreMim');
+const esconderLogin = document.querySelector('.esconderLogin');
+const buttonLogin = document.getElementById('button_login');
 
 
 function aparecerDopamina() {
@@ -20,7 +20,6 @@ function aparecerDopamina() {
 }
 
 function animacaoDopamina() {
-
     dopamina.style.transform = 'translateX(-12rem)';
     atividadeFisica.style.transform = 'translateX(12rem)';
     rotina.style.transform = 'translateX(-12rem)';
@@ -36,6 +35,6 @@ function desacelerarPulse_Cerebro() {
 
 
 
-function acessarLogin(){
+function acessarLogin() {
     window.location.href = './login.html'
 }
