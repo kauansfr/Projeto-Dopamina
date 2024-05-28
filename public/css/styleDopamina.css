@@ -9,7 +9,6 @@ header {
 
 .box_logo {
     position: relative;
-    /* align-items: center; */
     left: 8rem;
 }
 
@@ -46,3 +45,7 @@ header {
 }
 
 /* -------------------- FIM Header -------------------- */
+
+.box_main {
+    
+}

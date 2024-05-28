@@ -9,19 +9,18 @@ function validacoesCadastro() {
     const sobrenome = input_sobrenome.value;
     const email = input_email.value;
     const senha = input_senha.value;
+    // const quantidadeNumerosValidacao = listaNumerosValidacao.length;
+    let passouValidacao = false;
 
-    const quantidadeNumerosValidacao = listaNumerosValidacao.length;
-    for (let posicao = 0;
-        posicao < quantidadeNumerosValidacao;
-        posicao++
-    ) {
-        // let senhaContemNumero = true;
-         
-        if (senha.indexOf(listaNumerosValidacao[posicao]) < 0) {
-            alert(`Por favor, senha deve conter número!`);
-            posicao = quantidadeNumerosValidacao;
-        }
-    }
+    // for (let posicao = 0;
+    //     posicao < quantidadeNumerosValidacao;
+    //     posicao++
+    // ) {
+    //     if (senha.indexOf(listaNumerosValidacao[posicao]) == -1) {
+    //         alert(`Por favor, senha deve conter número!`);
+    //         posicao = quantidadeNumerosValidacao;
+    //     }
+    // }
 
     if (nome == '') {
         alert(`Por favor, preencha o campo "Nome"!`);
@@ -37,12 +36,49 @@ function validacoesCadastro() {
         alert(`Por favor, insira ".com"!`);
     } else if (senha.length < 8) {
         alert(`Por favor, insira pelo menos 8 caracteres no campo "Senha"!`);
-    } else { 
-        // CADASTRAR NO BANCO       
+    } else {
+        passouValidacao = true;
     }
+
+    return passouValidacao;
 }
 
 function cadastrarUsuario() {
-    validacoesCadastro();
+    const nome = input_nome.value;
+    const sobrenome = input_sobrenome.value;
+    const email = input_email.value;
+    const senha = input_senha.value;
 
+    if (validacoesCadastro()) {
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nome,
+                sobrenomeServer: sobrenome,
+                emailServer: email,
+                senhaServer: senha
+            }),
+        })
+            .then(function (resposta) {
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok) {
+                    alert(`DEU CERTO PAINHO!!!!!!!!!!`)
+                    
+                    setTimeout(() => {
+                        window.location = "login.html";
+                    }, "2000");
+                } else {
+                    throw "Houve um erro ao tentar realizar o cadastro!";
+                }
+            })
+            .catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+            });
+    }
 }
