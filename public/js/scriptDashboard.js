@@ -1,3 +1,3 @@
-function acessarHome() {
-    window.location.href = 'home.html';
+function acessarIndex() {
+    window.location.href = 'index.html';
  }

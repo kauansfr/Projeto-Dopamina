@@ -250,6 +250,7 @@ body {
     width: 25rem;
     height: 3rem;
     transition: 0.8s;
+    cursor: pointer;
 }
 
 .text_Rotina {
@@ -296,6 +297,7 @@ body {
     width: 25rem;
     height: 3rem;
     transition: 0.8s;
+    cursor: pointer;
 }
 
 .text_sobreMim {

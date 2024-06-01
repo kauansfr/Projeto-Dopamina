@@ -1,10 +1,45 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body::-webkit-scrollbar {
+    margin: -1px;
+    width: 2px;
+}
+
+body::-webkit-scrollbar:hover {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: grey;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #FFFFFF;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+body{
+
+}
+
 /* -------------------- Header -------------------- */
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 5rem;
+    position: fixed;
+    width: 100%;
+    height: 7.5vh;
+    color: #FFFFFF;
+    background-color: black;
 }
 
 .box_logo {
@@ -17,35 +52,155 @@ header {
     right: -10rem;
 }
 
+.nav_menu:hover {
+    transition: 0.45s;
+    transform: scale(1.05);
+}
+
 .nav_menu a {
     margin: 30px;
     text-decoration: none;
-    color: #000000;
-
+    color: #FFFFFF;
 }
 
+.nav_menu a:hover {
+    border-bottom: 1px solid #000000;
+    transition: 0.5s;
+}
+ 
 .box_logout {
     display: flex;
-    flex-direction: row;
     align-items: center;
     position: relative;
     right: 4rem;
 }
 
-#icon_logout {
-    cursor: pointer;
-    height: 25px;
-    width: 25px;
-}
-
-#text_logout {
-    text-decoration: none;
-    color: #000000;
-    font-size: 15px;
-}
-
 /* -------------------- FIM Header -------------------- */
 
 .box_main {
-    
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
 }
+
+.text_main {
+    width: 100%;
+    background-image: url(../assets/images/low-exposure.png);
+    background-size: cover;
+    background-position: center center; 
+}
+
+.text_main h1, #subtitle_main {
+    color: white;
+    position: relative;
+    top: 300px;
+
+}
+
+/* -------------------- INICIO Text Aside -------------------- */
+
+.second_content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 94.5vh;
+}
+
+.text_aside {
+    width: 50%;
+    padding-left: 2rem;
+    padding-top: 120px;
+}
+
+.content_aside {
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+.title_aside {
+    padding-bottom: 30px;
+    width: 90%;
+}
+
+.subtitle_aside {
+    position: relative;
+    font-size: 20px;
+    line-height: 30px;
+    width: 90%
+}
+
+.content_funcoes_importancia {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    width: 800px;
+    font-size: 20px;
+    height: 300px;
+}
+
+.icon_info {
+    width: 20px;
+    margin-bottom: 10px;
+}
+
+.icon_info img{
+    width: 100%;
+}
+
+.funcoes {
+    width: 40%;   
+}
+
+.funcoes h3 {
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+
+.funcoes p {
+    font-size: 17px;
+    line-height: 33px;
+}
+
+.importancia {
+    width: 50%;
+}
+
+.importancia h3 {
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+
+.importancia p {
+    font-size: 18px;
+    width: 70%;
+}
+
+/* -------------------- FIM Text Aside -------------------- */
+
+/* -------------------- INICIO Image Aside -------------------- */
+
+.box_imgAside {
+    width: 50%;
+    height: 95.5vh;
+} 
+
+.img_aside {
+    background-image: url('../assets/images/doctor-from-future-concept.jpg');
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* -------------------- FIM Image Aside -------------------- */
+
+/* -------------------- INICIO Third Content -------------------- */
+
+.third_content {
+    width: 100vh;
+    height: 92.5vh;
+}
+
+.
+/* -------------------- FIM Third Content -------------------- */

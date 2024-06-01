@@ -9,7 +9,6 @@ header {
 
 .box_logo {
     position: relative;
-    /* align-items: center; */
     left: 8rem;
 }
 
@@ -18,11 +17,22 @@ header {
     right: -10rem;
 }
 
+.nav_menu:hover {
+    transition: 0.45s;
+    transform: scale(1.05);
+}
+
 .nav_menu a {
     margin: 30px;
     text-decoration: none;
     color: #000000;
 
+}
+
+.nav_menu a:hover {
+    border-bottom: 1px solid #000000;
+    transition: 0.5s;
+    color: #000000;
 }
 
 .box_logout {
@@ -33,16 +43,33 @@ header {
     right: 4rem;
 }
 
+.box_logout:hover {
+    transition: 0.2s;
+    transform: scale(1.05);
+}
+
 #icon_logout {
     cursor: pointer;
     height: 25px;
     width: 25px;
 }
 
+.icon_logout:hover {
+    border-bottom: 1px solid #000000;
+    transition: 0.2s;
+    color: #000000;
+}
+
 #text_logout {
     text-decoration: none;
     color: #000000;
     font-size: 15px;
+}
+
+.text_logout:hover {
+    border-bottom: 1px solid #000000;
+    transition: 0.2s;
+    color: #000000;
 }
 
 /* -------------------- FIM Header -------------------- */

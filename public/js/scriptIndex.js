@@ -36,5 +36,9 @@ function desacelerarPulse_Cerebro() {
 
 
 function acessarLogin() {
-    window.location.href = './login.html'
+    window.location.href = './login.html';
+}
+
+function acessarDopamina() {
+    window.location.href = './dopamina.html';
 }
