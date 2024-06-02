@@ -25,8 +25,8 @@ body {
     overflow-x: hidden;
 }
 
-body{
-
+body{ 
+    height: 400rem;
 }
 
 /* -------------------- Header -------------------- */
@@ -38,8 +38,9 @@ header {
     position: fixed;
     width: 100%;
     height: 7.5vh;
+    font-size: 15px;
     color: #FFFFFF;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .box_logo {
@@ -94,7 +95,7 @@ header {
 .text_main h1, #subtitle_main {
     color: white;
     position: relative;
-    top: 300px;
+    top: 320px;
 
 }
 
@@ -104,39 +105,53 @@ header {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    height: 94.5vh;
+    height: 100vh;
 }
 
 .text_aside {
     width: 50%;
+    height: 100%;
     padding-left: 2rem;
-    padding-top: 120px;
 }
 
 .content_aside {
     font-size: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
+    padding-top: 100px;
 }
 
 .title_aside {
-    padding-bottom: 30px;
+    padding-top: 45px;
+    padding-bottom: 20px;
     width: 90%;
 }
 
 .subtitle_aside {
     position: relative;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 30px;
     width: 90%
 }
 
-.content_funcoes_importancia {
+.content_beneficios {
     display: flex;
-    flex-direction: row;
-    gap: 25px;
     width: 800px;
-    font-size: 20px;
+    font-size: 17px;
     height: 300px;
+}
+
+.beneficios {
+    width: 40%;
+}
+
+.beneficios h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.beneficios p {
+    font-size: 16px;
+    line-height: 25px;
 }
 
 .icon_info {
@@ -146,34 +161,7 @@ header {
 
 .icon_info img{
     width: 100%;
-}
-
-.funcoes {
-    width: 40%;   
-}
-
-.funcoes h3 {
-    margin-bottom: 25px;
-    font-size: 18px;
-}
-
-.funcoes p {
-    font-size: 17px;
-    line-height: 33px;
-}
-
-.importancia {
-    width: 50%;
-}
-
-.importancia h3 {
-    margin-bottom: 25px;
-    font-size: 18px;
-}
-
-.importancia p {
-    font-size: 18px;
-    width: 70%;
+    height: 100%;
 }
 
 /* -------------------- FIM Text Aside -------------------- */
@@ -182,7 +170,7 @@ header {
 
 .box_imgAside {
     width: 50%;
-    height: 95.5vh;
+    height: 110vh;
 } 
 
 .img_aside {
@@ -198,9 +186,183 @@ header {
 /* -------------------- INICIO Third Content -------------------- */
 
 .third_content {
-    width: 100vh;
-    height: 92.5vh;
+    width: 100%;
+    height: 100vh;
+    margin-top: 200px;
 }
 
-.
+.sinapse_quimica {
+    display: flex;
+    text-align: justify;
+    flex-direction: column;
+    padding-left: 8rem;
+    padding-right: 8rem;
+}
+
+.sinapse_quimica h2 {
+    border-bottom: 2px solid black;
+    position: relative;
+    top: -12px;
+    text-align: center;
+}
+
+.sinapse_quimica p {
+    padding-bottom: 10px;
+}
+
+.sinapse_quimica h3 {
+    position: relative;
+    top: 10px;
+    text-align: justify;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+
+.img_sinapseQuimica {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.img_sinapseQuimica img {
+    width: 50%;
+}
+
+.exemplo_roedor {
+    display: flex;
+    text-align: justify;
+    flex-direction: column;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    margin-top: 200px;
+}
+
+.exemplo_roedor h2 {
+    border-bottom: 2px solid black;
+    position: relative;
+    top: -12px;
+    text-align: center;
+}
+
+.exemplo_roedor p {
+    padding-bottom: 10px;
+}
+
+.exemplo_roedor h3 {
+    position: relative;
+    top: 10px;
+    text-align: justify;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.exemplo_dependenteQuimico {
+    display: flex;
+    text-align: justify;
+    flex-direction: column;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    margin-top: 100px;
+}
+
+.exemplo_dependenteQuimico h2 {
+    border-bottom: 2px solid black;
+    position: relative;
+    top: -12px;
+    text-align: center;
+}
+
+.exemplo_dependenteQuimico p {
+    padding-bottom: 10px;
+}
+
+.exemplo_dependenteQuimico h3 {
+    position: relative;
+    top: 10px;
+    text-align: justify;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.niveis_dopamina {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    border-top: 1px solid #000000;
+    padding-top: 40px;
+    width: 100%;
+}
+
+.niveis_dopamina p {
+    font-weight: bold;
+}
+
+.dados_niveisDopamina {
+    list-style: inside;
+    line-height: 35px;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 40px;
+}
+
+.exemplo_macaco {
+    display: flex;
+    text-align: justify;
+    flex-direction: column;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    margin-top: 200px;
+}
+
+.exemplo_macaco h2 {
+    border-bottom: 2px solid black;
+    position: relative;
+    top: -12px;
+    text-align: center;
+}
+
+.exemplo_macaco p {
+    padding-bottom: 10px;
+}
+
+.exemplo_macaco h3 {
+    position: relative;
+    top: 10px;
+    text-align: justify;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.img_graficoSuco {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.img_graficoSuco img {
+    width: 80%;
+}
+
+.gatilho_acao_recompensa {
+    text-align: center;
+    padding-top: 40px;
+    width: 100%;
+    line-height: 40px;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 40px;
+}
+
+.gatilho_acao_recompensa b {
+    color: #FF9900;
+}
 /* -------------------- FIM Third Content -------------------- */
+
