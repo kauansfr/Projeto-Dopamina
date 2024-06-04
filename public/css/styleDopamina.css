@@ -14,7 +14,7 @@ body::-webkit-scrollbar:hover {
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: grey;
+    background-color: #808080;
 }
 
 body::-webkit-scrollbar-track {
@@ -93,7 +93,7 @@ header {
 }
 
 .text_main h1, #subtitle_main {
-    color: white;
+    color: #FFFFFF;
     position: relative;
     top: 320px;
 
@@ -200,7 +200,7 @@ header {
 }
 
 .sinapse_quimica h2 {
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #000000;
     position: relative;
     top: -12px;
     text-align: center;
@@ -270,7 +270,7 @@ header {
 }
 
 .exemplo_dependenteQuimico h2 {
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #000000;
     position: relative;
     top: -12px;
     text-align: center;
@@ -320,7 +320,7 @@ header {
 }
 
 .exemplo_macaco h2 {
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #000000;
     position: relative;
     top: -12px;
     text-align: center;
@@ -359,10 +359,40 @@ header {
     border-top: 1px solid #000000;
     border-bottom: 1px solid #000000;
     padding-bottom: 40px;
+    margin-bottom: 90px;
 }
 
 .gatilho_acao_recompensa b {
     color: #FF9900;
+}
+
+.qualSeuSuco {
+    display: flex;
+    text-align: justify;
+    flex-direction: column;
+    padding-left: 8rem;
+    padding-right: 8rem;
+}
+
+.qualSeuSuco h2 {
+    color: #FF9900;
+    border-bottom: 2px solid #000000;
+    position: relative;
+    top: -12px;
+    text-align: center;
+}
+
+.qualSeuSuco p {
+    padding-bottom: 10px;
+}
+
+.qualSeuSuco h3 {
+    position: relative;
+    top: 10px;
+    text-align: justify;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
 }
 /* -------------------- FIM Third Content -------------------- */
 

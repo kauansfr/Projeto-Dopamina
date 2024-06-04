@@ -68,8 +68,6 @@ function cadastrarUsuario() {
                 console.log("resposta: ", resposta);
 
                 if (resposta.ok) {
-                    alert(`DEU CERTO PAINHO!!!!!!!!!!`)
-                    
                     setTimeout(() => {
                         window.location = "login.html";
                     }, "2000");

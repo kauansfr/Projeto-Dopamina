@@ -3,7 +3,6 @@ const dopamina = document.querySelector('.box_dopamina');
 const atividadeFisica = document.querySelector('.box_atividadeFisica');
 const rotina = document.querySelector('.box_controleRotina');
 const sobreMim = document.querySelector('.box_sobreMim');
-const esconderLogin = document.querySelector('.esconderLogin');
 const buttonLogin = document.getElementById('button_login');
 
 
@@ -12,8 +11,6 @@ function aparecerDopamina() {
     atividadeFisica.style.display = 'flex';
     rotina.style.display = 'flex';
     sobreMim.style.display = 'flex';
-    esconderLogin.style.display = 'none';
-    // buttonLogin.style.display = 'flex';
     setTimeout(animacaoDopamina, 1);
 
     desacelerarPulse_Cerebro();

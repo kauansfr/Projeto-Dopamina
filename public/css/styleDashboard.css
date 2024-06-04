@@ -1,75 +1,228 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: #FFFFFF;
+    font-family: 'Varuna', sans-serif;
+}
+
+body {
+    background-color: #252525;
+}
+
 /* -------------------- Header -------------------- */
 
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    height: 5rem;
+    height: 5.5rem;
 }
 
 .box_logo {
-    position: relative;
-    left: 8rem;
+    width: 8rem;
+    height: 7.5rem;
+    transition: 0.45s;
 }
 
-.nav_menu {
-    position: relative;
-    right: -10rem;
+.box_logo img {
+    width: 100%;
+    height: 100%;
 }
 
-.nav_menu:hover {
+.box_logo:hover {
     transition: 0.45s;
     transform: scale(1.05);
 }
 
-.nav_menu a {
-    margin: 30px;
-    text-decoration: none;
-    color: #000000;
+/* -------------------- FIM Header -------------------- */
 
-}
+/* -------------------- INICIO Side Bar -------------------- */
 
-.nav_menu a:hover {
-    border-bottom: 1px solid #000000;
-    transition: 0.5s;
-    color: #000000;
-}
-
-.box_logout {
+.main {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.side_bar {
+    width: 25%;
+    height: 100%;
+}
+
+.side_bar h2 {
     position: relative;
-    right: 4rem;
+    top: 100px;
+    text-align: center;
+    text-decoration-line: underline;
 }
 
-.box_logout:hover {
-    transition: 0.2s;
-    transform: scale(1.05);
+.options {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: bold;
+    height: 100%;
+    padding-top: 200px;
 }
 
-#icon_logout {
+.option_palavrasCruzadas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 300px;
+    height: 50px;
+    border: 2px solid #FFFFFF;
+    border-radius: 15px 5px;
     cursor: pointer;
-    height: 25px;
-    width: 25px;
+    transition: 0.5s;
+    margin-bottom: 10px;
+    
 }
 
-.icon_logout:hover {
-    border-bottom: 1px solid #000000;
-    transition: 0.2s;
-    color: #000000;
+.option_palavrasCruzadas:hover {
+    border: 2px solid #FFFFFF;
+    border-radius: 4px 15px;
+    background-color: rgb(255, 166, 0, 0.7);
+    transform: scale(1.05);
+    transition: 0.5s;
 }
 
-#text_logout {
+.option_palavrasCruzadas a {
     text-decoration: none;
-    color: #000000;
-    font-size: 15px;
 }
 
-.text_logout:hover {
-    border-bottom: 1px solid #000000;
-    transition: 0.2s;
-    color: #000000;
+.option_dashboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 300px;
+    height: 50px;
+    border: 2px solid #FFFFFF;
+    border-radius: 15px 5px;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-bottom: 10px;    
 }
 
-/* -------------------- FIM Header -------------------- */
+.option_dashboard:hover {
+    border: 2px solid #FFFFFF;
+    border-radius: 4px 15px;
+    background-color: rgb(255, 166, 0, 0.7);
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+.option_dashboard a {
+    text-decoration: none;
+}
+
+.option_ranking {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 300px;
+    height: 50px;
+    border: 2px solid #FFFFFF;
+    border-radius: 15px 5px;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-bottom: 10px;
+}
+
+.option_ranking:hover {
+    border: 2px solid #FFFFFF;
+    border-radius: 4px 15px;
+    background-color: rgb(255, 166, 0, 0.7);
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+.option_ranking a {
+    text-decoration: none;
+}
+
+.option_logout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 300px;
+    height: 50px;
+    border: 2px solid #FFFFFF;
+    border-radius: 15px 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.option_logout:hover {
+    border: 2px solid #FFFFFF;
+    border-radius: 4px 15px;
+    background-color: rgb(255, 166, 0, 0.7);
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+.option_logout a {
+    text-decoration: none;
+}
+
+/* -------------------- FIM Side Bar -------------------- */
+
+/* -------------------- INICIO Conteúdo -------------------- */
+
+.container_content {
+    width: 75%; 
+    height: 100%;
+    background-color: #333333;
+}
+
+.container_players {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    height: 250px;
+    border: 2px solid green;
+    gap: 50px;
+}
+
+.totalPlayers {
+    width: 250px;
+    height: 100px;
+    border: 2px solid #FFFFFF;
+    border-radius: 25px 25px;
+}
+
+.title_totalPlayers {
+    padding-top: 15px;
+    font-weight: bold;
+}
+
+.number_totalPlayers {
+    padding-top: 20px;
+}
+
+.howMany_finished {
+    width: 250px;
+    height: 100px;
+    border: 2px solid #FFFFFF;
+    border-radius: 25px 25px;
+}
+
+.title_finished {
+    padding-top: 15px;
+    font-weight: bold;
+}
+
+.number_finished {
+    padding-top: 20px;
+}
+
+
+/* -------------------- FIM Conteúdo -------------------- */
