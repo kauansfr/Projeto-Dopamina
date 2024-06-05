@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'TheGoodMonolith', sans-serif;
+    color: #FFFFFF;
+}
+
+body {
+    background-color: #252525;
+}
+
+/* -------------------- INICIO Header -------------------- */
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 5.5rem;
+}
+
+.box_logo {
+    width: 8rem;
+    height: 7.5rem;
+    transition: 0.45s;
+}
+
+.box_logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.box_logo:hover {
+    transition: 0.45s;
+    transform: scale(1.05);
+}
+
+/* -------------------- FIM Header -------------------- */
+
+/* -------------------- INICIO Titulo e Botões Começar/Terminar -------------------- */
+
+.container_titulo {
+    margin-top: -50px;
+}
+
+.container_titulo h1 {
+    font-family: 'Templo Grueso', sans-serif;
+    text-align: center;
+    font-size: 50px;
+}
+
+.div_button {
+    display: flex;
+    justify-content: center;
+}
+
+.button_comecar {
+    cursor: pointer;
+    font-family: 'Templo Grueso', sans-serif;
+    border: 3px solid #FFFFFF;
+    border-radius: 10px;
+    border-style: groove;
+    background-color: transparent;
+    height: 50px;
+    width: 250px;
+    font-size: 20px;
+    transition: 0.6s;    
+}
+
+.button_comecar:hover {
+    border: 10px 10px solid #FFFFFF;
+    border-radius: 10px;
+    border-style: groove;
+    background-color: rgb(255, 166, 0, 0.4);
+    transform: scale(1.07);
+    transition: 0.6s;    
+}
+
+.button_encerrar {
+    cursor: pointer;
+    font-family: 'Templo Grueso', sans-serif;
+    border: 3px solid #FFFFFF;
+    border-radius: 10px;
+    border-style: groove;
+    background-color: transparent;
+    height: 50px;
+    width: 250px;
+    font-size: 20px;
+}
+
+.button_encerrar:hover {
+    border: 10px 10px solid #FFFFFF;
+    border-radius: 10px;
+    border-style: groove;
+    background-color: rgb(255, 166, 0, 0.4);
+    transform: scale(1.07);
+    transition: 0.6s;    
+}
+
+/* -------------------- FIM Titulo e Botões Começar/Terminar -------------------- */
+
+/* -------------------- INICIO Box Information -------------------- */
+
+.box_information {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 22px;
+}
+
+.titulo_instrucoesJogo {
+    padding-top: 60px;
+}
+
+.paragrafo_instrucoesJogo {
+    width: 500px;
+}
+
+.paragrafo_instrucoesJogo b {
+    color: #FFD260;
+}
+
+/* -------------------- FIM Box Information -------------------- */
+
+/* -------------------- INICIO Inserir Resposta  -------------------- */
+
+
+.box_inserirResposta {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container_cruzadinha_input {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 190vh;
+}
+
+#id_questions {
+    width: 350px;
+}
+
+#div_questionText {
+    padding-top: 10px;
+    text-align: center;
+    height: 50px;
+    font-size: 20px;
+}
+
+.box_inserirResposta {
+    margin-top: 150px;
+    margin-left: 100px;
+    width: 400px;
+    height: 200px;
+    align-items: center;
+    gap: 10px;
+}
+
+#input_answer {
+    margin-top: 35px;
+    width: 175px;
+    height: 35px;
+    background-color: transparent;
+    border: 2px solid #6F6F6F;
+    color: #FFFFFF;
+}
+
+#input_answer::-webkit-input-placeholder {
+    color: #FFFFFF;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+ }
+
+
+#button_verify {
+    cursor: pointer;
+    font-family: 'Templo Grueso', sans-serif;
+    border: 3px solid #FFFFFF;
+    border-radius: 10px;
+    border-style: groove;
+    background-color: transparent;
+    height: 50px;
+    width: 200px;
+    font-size: 20px;
+    transition: 0.6s;    
+}
+
+#button_verify:hover {
+    border: 10px 10px solid #FFFFFF;
+    border-radius: 10px;
+    border-style: groove;
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.1);
+    transition: 0.6s;
+}
+
+/* -------------------- FIM Inserir Resposta  -------------------- */
+
+table {
+    border: 1px #FFD260 solid;
+    font-size: 25px;
+    margin-left: 130px;
+    margin: auto;
+    align-items: center;
+}
+
+
+tr {
+    border: 1px #FFD260 solid;
+}
+
+td {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    vertical-align: center;
+}
+
+.container {
+    color: #FFFFFF;
+    width: 1100px;
+    margin: auto;
+}
+
+.button {
+    margin: auto;
+    display: inline-block;
+}
+
+.deadCell {
+    background-color: transparent;
+}
+
+.availableCell {
+    background-color: #ffffff66;
+    border: 1px #000000 solid;
+}
+
+#div_verifiedAnswer {
+    width: 500px;
+    height: 70px;
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
+    vertical-align: center;
+    margin-bottom: 20px;
+}
+
+.correctAnswer {
+    background-color: #58D68D;
+    color: #196F3D;
+    border: 1px #196F3D solid;
+}
+
+.wrongAnswer {
+    background-color: #EC7063;
+    color: #7B241C;
+    border: 1px #7B241C solid;
+}

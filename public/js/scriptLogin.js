@@ -7,7 +7,7 @@ function validacoesLogin() {
     var senha = input_senha.value;
 
     if (email == '' || senha == '') {
-        alert(`Por favor, preencha os campos "Email" e "Senha"`)
+        alert(`Por favor, preencha os campos "Email" e "Senha"`);
     }
 }
 
@@ -43,7 +43,7 @@ function usuarioLogado() {
                 sessionStorage.ID_USUARIO = json.id;
 
                 setTimeout(function () {
-                    window.location = "./dashboard.html";
+                    window.location = "./dashboardDopa.html";
                 }, 1000); // apenas para exibir o loading
             });
 

@@ -226,3 +226,8 @@ header {
 
 
 /* -------------------- FIM Conteúdo -------------------- */
+
+.containerGraphics1 {
+    width: 500px;
+    height: 100%;
+}
