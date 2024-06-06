@@ -21,8 +21,22 @@ header {
 }
 
 .box_logo {
-    position: relative;
-    left: 8rem;
+    cursor: pointer;
+    padding-top: 15px;
+    padding-left: 25px;
+    width: 8rem;
+    height: 7.5rem;
+    transition: 0.45s;
+}
+
+.box_logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.box_logo:hover {
+    transition: 0.45s;
+    transform: scale(1.05);
 }
 
 .nav_menu {
@@ -37,7 +51,7 @@ header {
 }
 
 .nav_menu a {
-    margin: 30px;
+    margin: 40px;
     text-decoration: none;
     color: #000000;
     transition: 0.5s;

@@ -27,7 +27,7 @@ function validacoesCadastro() {
         alert(`Por favor, insira ".com"!`);
     } else if (senha.length < 8) {
         alert(`Por favor, insira pelo menos 8 caracteres no campo "Senha"!`);
-    } else if (SenhaNaoTemNumero()) {
+    } else if (!SenhaNaoTemNumero()) {
         alert(`Por favor, senha deve conter número!`);
     } else {
         passouValidacao = true;

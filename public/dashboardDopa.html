@@ -23,7 +23,7 @@
 
             <div class="options">
 
-                <div class="option_palavrasCruzadas">
+                <div class="option_palavrasCruzadas" onclick="acessarPalavrasCruzadas()">
                     Palavras-Cruzadas
                 </div>
 
@@ -35,7 +35,7 @@
                     Ranking
                 </div>
 
-                <div class="option_logout">
+                <div class="option_logout" onclick="acessarIndex()">
                     Logout
                 </div>
             </div>
@@ -48,18 +48,18 @@
                         Total de Jogadores
                     </div>
 
-                    <div class="number_totalPlayers">
-                        59
+                    <div class="number_totalPlayers" id="inner_totalJogadores">
+                        
                     </div>
                 </div>
 
                 <div class="howMany_finished">
                     <div class="title_finished">
-                        Quantos Terminaram
+                        Média Tempo de Conclusão
                     </div>
 
-                    <div class="number_finished">
-                        10
+                    <div class="number_finished" id="inner_mediaTempoConclusao">
+                        
                     </div>
                 </div>
             </div>
@@ -76,14 +76,6 @@
 
                         </div>
                     </div>
-
-                    <!-- <div class="graphic2">
-
-                        <canvas id="myChart2">
-
-                        </canvas>
-
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -91,7 +83,7 @@
         <div class="container_content2">
             <div class="box_ranking" style="border: 2px solid red;">
                 <div class="ranking" style="border: 2px solid green;">
-                    
+
                 </div>
             </div>
         </div>

@@ -315,3 +315,11 @@ function verify() {
         alert('Por Favor, digite uma resposta na caixa de texto');
     }
 }
+
+function acessarIndex() {
+    window.location.href = 'index.html';
+}
+
+function acessarDashboard() {
+    window.location.href = 'dashboardDopa.html';
+}

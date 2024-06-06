@@ -5,18 +5,40 @@ const rotina = document.querySelector('.box_controleRotina');
 const sobreMim = document.querySelector('.box_sobreMim');
 const buttonLogin = document.getElementById('button_login');
 
+let controleAbrirFechar = true;
 
-function aparecerDopamina() {
-    dopamina.style.display = 'flex';
-    atividadeFisica.style.display = 'flex';
-    rotina.style.display = 'flex';
-    sobreMim.style.display = 'flex';
-    setTimeout(animacaoDopamina, 1);
+function aparecerDivs() {
 
-    desacelerarPulse_Cerebro();
+    if (controleAbrirFechar) {
+        controleAbrirFechar = false;
+
+        dopamina.style.display = 'flex';
+        atividadeFisica.style.display = 'flex';
+        rotina.style.display = 'flex';
+        sobreMim.style.display = 'flex';
+        setTimeout(animacaoDivsAbrir, 1);
+
+        desacelerarPulse_Cerebro();
+    } else {
+        controleAbrirFechar = true;
+        animacaoDivsFechar();
+
+        setTimeout(function () {
+            dopamina.style.display = 'none';
+            atividadeFisica.style.display = 'none';
+            rotina.style.display = 'none';
+            sobreMim.style.display = 'none';
+        }, 550);
+
+        acelerarPulse_Cerebro();
+    }
 }
 
-function animacaoDopamina() {
+function sumirDopamina() {
+
+}
+
+function animacaoDivsAbrir() {
     dopamina.style.transform = 'translateX(-12rem)';
     atividadeFisica.style.transform = 'translateX(12rem)';
     rotina.style.transform = 'translateX(-12rem)';
@@ -25,11 +47,21 @@ function animacaoDopamina() {
 
 }
 
+function animacaoDivsFechar() {
+    dopamina.style.transform = 'translateX(12rem)';
+    atividadeFisica.style.transform = 'translateX(-12rem)';
+    rotina.style.transform = 'translateX(12rem)';
+    sobreMim.style.transform = 'translateX(-12rem)';
+    buttonLogin.style.transform = 'translateX(6%)';
+}
+
 function desacelerarPulse_Cerebro() {
     cerebro.style.animation = 'pulse_OnClick 2000ms infinite';
 }
-// FUNÇÃO PARA VOLTAR AS DIVS E NO FINAL DO CÓDIGO CHAMAR OUTRA FUNÇÃO COM setTIMOUT PARA DISPLAY NONE
 
+function acelerarPulse_Cerebro() {
+    cerebro.style.animation = 'pulse 1200ms infinite;';
+}
 
 
 function acessarLogin() {

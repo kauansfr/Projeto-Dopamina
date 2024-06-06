@@ -1,5 +1,24 @@
 var usuarioModel = require("../models/usuarioModel");
 
+function coletarDadosTotais(req, res) {
+    usuarioModel.coletarDadosTotais()
+    .then(function (resultadoColetarDadosTotais) {
+        if (resultadoColetarDadosTotais.length > 0) {
+            console.log("Dados coletados:", resultadoColetarDadosTotais);
+            res.status(200).json({
+                totalJogadores: resultadoColetarDadosTotais[0].totalJogadores,
+                mediaTempoConclusao: resultadoColetarDadosTotais[0].mediaTempoConclusao
+            });
+        } else {
+            res.status(204).send("Nenhum resultado encontrado!");
+        }
+    })
+    .catch(function (erro) {
+        console.error("Erro ao coletar dados:", erro);
+        res.status(500).send("Erro no servidor");
+    });
+}
+
 function autenticar(req, res) {
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
@@ -23,8 +42,7 @@ function autenticar(req, res) {
                     id: resultadoAutenticar[0].idUsuario,
                     nome: resultadoAutenticar[0].nomeUsuario,
                     sobrenome: resultadoAutenticar[0].sobrenomeUsuario,
-                    email: resultadoAutenticar[0].emailUsuario,
-                    despertaDopamina: resultadoAutenticar[0].despertaDopamina
+                    email: resultadoAutenticar[0].emailUsuario
                 });
                 
             }
@@ -77,5 +95,6 @@ function cadastrar(req, res) {
 
 module.exports = {
     autenticar,
-    cadastrar
+    cadastrar,
+    coletarDadosTotais
 }

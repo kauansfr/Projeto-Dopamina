@@ -25,7 +25,7 @@ body {
     overflow-x: hidden;
 }
 
-body{ 
+body {
     height: 400rem;
 }
 
@@ -44,13 +44,27 @@ header {
 }
 
 .box_logo {
-    position: relative;
-    left: 8rem;
+    padding-top: 50px;
+    width: 8rem;
+    height: 7.5rem;
+    transition: 0.45s;
+    cursor: pointer;
+}
+
+.box_logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.box_logo:hover {
+    transition: 0.45s;
+    transform: scale(1.05);
 }
 
 .nav_menu {
     position: relative;
     right: -10rem;
+    transition: 0.45s;
 }
 
 .nav_menu:hover {
@@ -65,15 +79,27 @@ header {
 }
 
 .nav_menu a:hover {
-    border-bottom: 1px solid #000000;
     transition: 0.5s;
+    border-bottom: 1px solid #FFFFFF;
 }
- 
-.box_logout {
-    display: flex;
-    align-items: center;
-    position: relative;
-    right: 4rem;
+
+.box_login {
+    height: 28px;
+    width: 90px;
+    padding-top: 9px;
+    text-align: center;
+    margin-right: 40px;
+}
+
+.button_login {
+    color: #FFFFFF;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button_login:hover {
+    transition: 0.5s;
+    transform: scale(1.05);
 }
 
 /* -------------------- FIM Header -------------------- */
@@ -89,10 +115,11 @@ header {
     width: 100%;
     background-image: url(../assets/images/low-exposure.png);
     background-size: cover;
-    background-position: center center; 
+    background-position: center center;
 }
 
-.text_main h1, #subtitle_main {
+.text_main h1,
+#subtitle_main {
     color: #FFFFFF;
     position: relative;
     top: 320px;
@@ -159,7 +186,7 @@ header {
     margin-bottom: 10px;
 }
 
-.icon_info img{
+.icon_info img {
     width: 100%;
     height: 100%;
 }
@@ -171,7 +198,7 @@ header {
 .box_imgAside {
     width: 50%;
     height: 110vh;
-} 
+}
 
 .img_aside {
     background-image: url('../assets/images/doctor-from-future-concept.jpg');
@@ -394,5 +421,5 @@ header {
     padding-top: 10px;
     padding-bottom: 20px;
 }
-/* -------------------- FIM Third Content -------------------- */
 
+/* -------------------- FIM Third Content -------------------- */

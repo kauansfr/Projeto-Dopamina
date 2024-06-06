@@ -19,6 +19,7 @@ header {
 }
 
 .box_logo {
+    cursor: pointer;
     width: 8rem;
     height: 7.5rem;
     transition: 0.45s;
@@ -32,6 +33,25 @@ header {
 .box_logo:hover {
     transition: 0.45s;
     transform: scale(1.05);
+}
+
+.voltarDashboard {
+    position: relative;
+    left: 150vh;
+    top: 25px;    
+}
+
+.title_voltarDashboard {
+    font-size: 20px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.title_voltarDashboard:hover {
+    font-weight: bold;
+    transition: 0.4s;
+    transform: scale(1.1);
+    border-bottom: 3px solid white;
 }
 
 /* -------------------- FIM Header -------------------- */

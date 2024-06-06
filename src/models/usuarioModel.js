@@ -1,5 +1,15 @@
 var database = require("../database/config")
 
+function coletarDadosTotais() {
+    var instrucaoSql = `
+    select
+        (select count(fkUsuario) from cruzadinha) as totalJogadores,
+        (select round(avg(timestampdiff(second, inicio, conclusao))) from cruzadinha) as mediaTempoConclusao;
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
 function autenticar(email, senha) {
     var instrucaoSql = `
         SELECT idUsuario, nomeUsuario, sobrenomeUsuario, emailUsuario, despertaDopamina FROM usuario WHERE emailUsuario = '${email}' AND senhaUsuario = '${senha}';
@@ -13,7 +23,7 @@ function cadastrar(nome, sobrenome, email, senha, despertaDopamina) {
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
     //  e na ordem de inserção dos dados.
     var instrucaoSql = `
-        INSERT INTO usuario (nomeUsuario, sobrenomeUsuario, emailUsuario, senhaUsuario, despertaDopamina) VALUES ('${nome}', '${sobrenome}', '${email}', '${senha}', '${despertaDopamina}';
+        INSERT INTO usuario (nomeUsuario, sobrenomeUsuario, emailUsuario, senhaUsuario, despertaDopamina) VALUES ('${nome}', '${sobrenome}', '${email}', '${senha}', '${despertaDopamina}');
     `;
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
@@ -21,5 +31,6 @@ function cadastrar(nome, sobrenome, email, senha, despertaDopamina) {
 
 module.exports = {
     autenticar,
-    cadastrar
+    cadastrar,
+    coletarDadosTotais
 };

@@ -2,6 +2,10 @@ function acessarCadastro() {
     window.location.href = './cadastro.html';
 }
 
+function acessarIndex() {
+    window.location.href = './index.html';
+}
+
 function validacoesLogin() {
     var email = input_email.value;
     var senha = input_senha.value;
