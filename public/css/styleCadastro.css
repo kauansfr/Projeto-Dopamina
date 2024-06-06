@@ -8,7 +8,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-} 
+    overflow: hidden;
+}
 
 /* -------------------- Header -------------------- */
 
@@ -62,16 +63,25 @@ header {
     position: relative;
     top: 1.5rem;
     width: 500px;
-    height: 575px;
-    border: 3px solid #000000;
-    border-radius: 10px;
+    height: 100%;
+    border-top: 3px solid #000000;
+    border-left: 3px solid #000000;
+    border-right: 3px solid #000000;
+    border-radius: 20px;
 }
 
 .div_tituloCadastro h1,
 #titulo {
     position: relative;
     top: 40px;
-    padding: 10px;
+    padding: 5px;
+}
+
+.select_despertaDopamina {
+    width: 350px;
+    height: 35px;
+    border: 1.7px solid #000000;
+    border-radius: 10px 10px;
 }
 
 .box_input {
@@ -88,14 +98,22 @@ header {
     flex-direction: column;
 }
 
-#input_nome, #input_sobrenome, #input_email, #input_senha {
+#input_nome,
+#input_sobrenome,
+#input_email,
+#input_senha {
     width: 350px;
     height: 10px;
+    border: 1.7px solid #000000;
     border-radius: 10px 10px;
 }
 
 #titulo_input,
-#input_nome, #input_sobrenome, #input_email, #input_senha {
+#titulo_select,
+#input_nome,
+#input_sobrenome,
+#input_email,
+#input_senha {
     padding-bottom: 12px;
     padding-top: 10px;
 }

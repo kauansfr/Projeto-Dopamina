@@ -23,7 +23,8 @@ function autenticar(req, res) {
                     id: resultadoAutenticar[0].idUsuario,
                     nome: resultadoAutenticar[0].nomeUsuario,
                     sobrenome: resultadoAutenticar[0].sobrenomeUsuario,
-                    email: resultadoAutenticar[0].emailUsuario
+                    email: resultadoAutenticar[0].emailUsuario,
+                    despertaDopamina: resultadoAutenticar[0].despertaDopamina
                 });
                 
             }
@@ -44,6 +45,7 @@ function cadastrar(req, res) {
     var sobrenome = req.body.sobrenomeServer;
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
+    var despertaDopamina = req.body.despertaDopaminaServer;
 
     // Faça as validações dos valores
     if (nome == undefined) {
@@ -55,7 +57,7 @@ function cadastrar(req, res) {
     } else {
 
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrar(nome, sobrenome, email, senha)
+        usuarioModel.cadastrar(nome, sobrenome, email, senha, despertaDopamina)
             .then(
                 function (resultado) {
                     res.json(resultado);

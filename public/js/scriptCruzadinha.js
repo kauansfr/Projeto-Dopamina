@@ -8,7 +8,7 @@ var questions_list = [
     'Quantidade de dopamina liberada durante o consumo de anfetaminas (apenas números)',
     'Nome científico da comunicação entre neurônios.',
     'Estado de equilíbrio que o corpo busca após uso de drogas',
-    'Exemplo de uma atividade que aumenta os níveis de dopamina em 100%',
+    'Atividade que aumenta os níveis de dopamina em 100%',
     'Esforço que os macacos precisavam fazer 10 vezes para receber suco de maçã.',
     'Responsável por entregar mensagens aos neurônios.'
 ];
@@ -41,7 +41,7 @@ var word = {
                 findCell.innerHTML = word.word1.letter[i];
                 console.log(word.word1.letter[i]);
             }
-            cell_2.innerHTML = '<span style="color: #FFFFFF; font-size:12px; font-weight: bold;">1</span>D';
+            cell_2.innerHTML = '<span style="color: #000000; font-size:12px; font-weight: bold;">1</span>D';
         }
     },
     word2: {
@@ -54,7 +54,7 @@ var word = {
                 findCell.innerHTML = word.word2.letter[i];
                 console.log(word.word2.letter[i]);
             }
-            cell_136.innerHTML = '<span style="color: #FFFFFF; font-size:12px; font-weight: bold;">2</span>R';
+            cell_136.innerHTML = '<span style="color: #000000; font-size:12px; font-weight: bold;">2</span>R';
 
         }
     },
@@ -69,7 +69,7 @@ var word = {
                 findCell.innerHTML = word.word3.letter[i];
                 console.log(word.word3.letter[i]);
             }
-            cell_210.innerHTML = '<span style="color: #FFFFFF; font-size:12px; font-weight: bold;">3</span>G';
+            cell_210.innerHTML = '<span style="color: #000000; font-size:12px; font-weight: bold;">3</span>G';
         }
     },
     word4: {
@@ -82,7 +82,7 @@ var word = {
                 findCell.innerHTML = word.word4.letter[i];
                 console.log(word.word4.letter[i]);
             }
-            cell_308.innerHTML = '<span style="color: #FFFFFF; font-size:12px; font-weight: bold;">4</span>M';
+            cell_308.innerHTML = '<span style="color: #000000; font-size:12px; font-weight: bold;">4</span>M';
         }
     },
     word5: {
@@ -95,7 +95,7 @@ var word = {
                 findCell.innerHTML = word.word5.letter[i];
                 console.log(word.word5.letter[i]);
             }
-            cell_134.innerHTML = '<span style="color: #FFFFFF; font-size:12px; font-weight: bold;">5</span>1';
+            cell_134.innerHTML = '<span style="color: #000000; font-size:12px; font-weight: bold;">5</span>1';
         }
     },
     word6: {
@@ -108,7 +108,7 @@ var word = {
                 findCell.innerHTML = word.word6.letter[i];
                 console.log(word.word6.letter[i]);
             }
-            cell_96.innerHTML = '<span style="color: #FFFFFF; font-size:12px; font-weight: bold;">6</span>S';
+            cell_96.innerHTML = '<span style="color: #000000; font-size:12px; font-weight: bold;">6</span>S';
         }
     },
     word7: {
@@ -121,7 +121,7 @@ var word = {
                 findCell.innerHTML = word.word7.letter[i];
                 console.log(word.word7.letter[i]);
             }
-            cell_245.innerHTML = '<span style="color: #FFFFFF; font-size:12px; font-weight: bold;">7</span>H';
+            cell_245.innerHTML = '<span style="color: #000000; font-size:12px; font-weight: bold;">7</span>H';
         }
     },
     word8: {
@@ -134,7 +134,7 @@ var word = {
                 findCell.innerHTML = word.word8.letter[i];
                 console.log(word.word8.letter[i]);
             }
-            cell_93.innerHTML = '<span style="color: #FFFFFF; font-size:12px; font-weight: bold;">8</span>S';
+            cell_93.innerHTML = '<span style="color: #000000; font-size:12px; font-weight: bold;">8</span>S';
         }
     },
     word9: {
@@ -147,7 +147,7 @@ var word = {
                 findCell.innerHTML = word.word9.letter[i];
                 console.log(word.word9.letter[i]);
             }
-            cell_300.innerHTML = '<span style="color: #FFFFFF; font-size:12px; font-weight: bold;">9</span>A';
+            cell_300.innerHTML = '<span style="color: #000000; font-size:12px; font-weight: bold;">9</span>A';
         }
     },
     word10: {
@@ -160,7 +160,7 @@ var word = {
                 findCell.innerHTML = word.word10.letter[i];
                 console.log(word.word10.letter[i]);
             }
-            cell_75.innerHTML = '<span style="color: #FFFFFF; font-size:12px; font-weight: bold;">10</span>N';
+            cell_75.innerHTML = '<span style="color: #000000; font-size:12px; font-weight: bold;">10</span>N';
         }
     }
 };
@@ -222,10 +222,6 @@ function gameSequence() {
     }
     else if (cont_correctAnswer == 10) {
         word.word10.write();
-
-        setTimeout(function () {
-            destroyGrid();
-        }, 3000);
     }
 }
 
@@ -278,7 +274,7 @@ function paintCells() {
         initial++) {
         var paintIndex_cell = document.getElementById(`cell_${firstIndex[initial]}`);
 
-        paintIndex_cell.innerHTML = `<span style="color: #FFFFFF; font-size:12px; font-weight: bold;">${initial + 1}</span>`;
+        paintIndex_cell.innerHTML = `<span style="color: #000000; font-size:12px; font-weight: bold;">${initial + 1}</span>`;
     }
 }
 
@@ -291,7 +287,14 @@ function verify() {
         if (answer == special_words[cont_correctAnswer]) {
             id_verifiedAnswer.classList.add('correctAnswer');
             id_verifiedAnswer.innerHTML = '<br text-align: center;>Resposta Correta!';
-            cont_correctAnswer++;
+
+            if (cont_correctAnswer < 9) {
+                cont_correctAnswer++;
+            } else {
+                setTimeout(function () {
+                    destroyGrid();
+                }, 1500);
+            }
         }
         else {
             id_verifiedAnswer.classList.add('wrongAnswer');
@@ -303,11 +306,10 @@ function verify() {
 
         setTimeout(function () {
             id_verifiedAnswer.style.display = 'none';
-        }, 3000);
+        }, 1400);
 
         input_answer.value = '';
         gameSequence();
-
     }
     else {
         alert('Por Favor, digite uma resposta na caixa de texto');

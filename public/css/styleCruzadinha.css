@@ -63,7 +63,7 @@ header {
     height: 50px;
     width: 250px;
     font-size: 20px;
-    transition: 0.6s;    
+    transition: 0.6s;
 }
 
 .button_comecar:hover {
@@ -72,7 +72,7 @@ header {
     border-style: groove;
     background-color: rgb(255, 166, 0, 0.4);
     transform: scale(1.07);
-    transition: 0.6s;    
+    transition: 0.6s;
 }
 
 .button_encerrar {
@@ -93,7 +93,7 @@ header {
     border-style: groove;
     background-color: rgb(255, 166, 0, 0.4);
     transform: scale(1.07);
-    transition: 0.6s;    
+    transition: 0.6s;
 }
 
 /* -------------------- FIM Titulo e Botões Começar/Terminar -------------------- */
@@ -125,6 +125,11 @@ header {
 
 /* -------------------- INICIO Inserir Resposta  -------------------- */
 
+/* -- TABLE */
+#div_canvasCruzada {
+    position: relative;
+    bottom: 30px;
+}
 
 .box_inserirResposta {
     display: flex;
@@ -173,7 +178,7 @@ header {
     text-align: center;
     font-weight: bold;
     font-size: 15px;
- }
+}
 
 
 #button_verify {
@@ -186,7 +191,7 @@ header {
     height: 50px;
     width: 200px;
     font-size: 20px;
-    transition: 0.6s;    
+    transition: 0.6s;
 }
 
 #button_verify:hover {
@@ -201,16 +206,10 @@ header {
 /* -------------------- FIM Inserir Resposta  -------------------- */
 
 table {
-    border: 1px #FFD260 solid;
     font-size: 25px;
     margin-left: 130px;
     margin: auto;
     align-items: center;
-}
-
-
-tr {
-    border: 1px #FFD260 solid;
 }
 
 td {
@@ -237,7 +236,11 @@ td {
 
 .availableCell {
     background-color: #ffffff66;
-    border: 1px #000000 solid;
+    color: #000000;
+    font-weight: bold;
+    border: 1.8px #000000 solid;
+    border-radius: 10px 5px;
+    box-shadow: -1px 8px 9px 1px rgba(0, 0, 0, 0.56), inset 0px 0px 20px 10px rgba(255, 255, 255, 0.7);;
 }
 
 #div_verifiedAnswer {

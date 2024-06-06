@@ -1,4 +1,5 @@
 const listaNumerosValidacao = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+const quantidadeNumerosValidacao = listaNumerosValidacao.length;
 
 function acessarLogin() {
     window.location.href = './login.html'
@@ -9,18 +10,8 @@ function validacoesCadastro() {
     const sobrenome = input_sobrenome.value;
     const email = input_email.value;
     const senha = input_senha.value;
-    // const quantidadeNumerosValidacao = listaNumerosValidacao.length;
-    let passouValidacao = false;
 
-    // for (let posicao = 0;
-    //     posicao < quantidadeNumerosValidacao;
-    //     posicao++
-    // ) {
-    //     if (senha.indexOf(listaNumerosValidacao[posicao]) == -1) {
-    //         alert(`Por favor, senha deve conter número!`);
-    //         posicao = quantidadeNumerosValidacao;
-    //     }
-    // }
+    let passouValidacao = false;
 
     if (nome == '') {
         alert(`Por favor, preencha o campo "Nome"!`);
@@ -36,6 +27,8 @@ function validacoesCadastro() {
         alert(`Por favor, insira ".com"!`);
     } else if (senha.length < 8) {
         alert(`Por favor, insira pelo menos 8 caracteres no campo "Senha"!`);
+    } else if (SenhaNaoTemNumero()) {
+        alert(`Por favor, senha deve conter número!`);
     } else {
         passouValidacao = true;
     }
@@ -43,11 +36,27 @@ function validacoesCadastro() {
     return passouValidacao;
 }
 
+function SenhaNaoTemNumero() {
+    const senha = input_senha.value;
+
+    for (let posicao = 0;
+        posicao < quantidadeNumerosValidacao;
+        posicao++
+    ) {
+        if (senha.indexOf(listaNumerosValidacao[posicao]) == -1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+
 function cadastrarUsuario() {
     const nome = input_nome.value;
     const sobrenome = input_sobrenome.value;
     const email = input_email.value;
     const senha = input_senha.value;
+    const despertaDopamina = input_despertaDopamina.value;
 
     if (validacoesCadastro()) {
         fetch("/usuarios/cadastrar", {
@@ -61,7 +70,8 @@ function cadastrarUsuario() {
                 nomeServer: nome,
                 sobrenomeServer: sobrenome,
                 emailServer: email,
-                senhaServer: senha
+                senhaServer: senha,
+                despertaDopaminaServer: despertaDopamina
             }),
         })
             .then(function (resposta) {

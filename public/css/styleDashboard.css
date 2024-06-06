@@ -7,9 +7,10 @@
 
 body {
     background-color: #252525;
+    overflow: hidden;
 }
 
-/* -------------------- Header -------------------- */
+/* -------------------- START Header -------------------- */
 
 header {
     display: flex;
@@ -34,9 +35,9 @@ header {
     transform: scale(1.05);
 }
 
-/* -------------------- FIM Header -------------------- */
+/* -------------------- END Header -------------------- */
 
-/* -------------------- INICIO Side Bar -------------------- */
+/* -------------------- START Side Bar -------------------- */
 
 .main {
     display: flex;
@@ -171,11 +172,11 @@ header {
     text-decoration: none;
 }
 
-/* -------------------- FIM Side Bar -------------------- */
+/* -------------------- END Side Bar -------------------- */
 
-/* -------------------- INICIO Conteúdo -------------------- */
+/* -------------------- START Dashboard -------------------- */
 
-.container_content {
+.container_content1 {
     width: 75%; 
     height: 100%;
     background-color: #333333;
@@ -224,10 +225,40 @@ header {
     padding-top: 20px;
 }
 
+/* -------------------- END Dashboard -------------------- */
 
-/* -------------------- FIM Conteúdo -------------------- */
+/* -------------------- START Graphics -------------------- */
 
 .containerGraphics1 {
     width: 500px;
     height: 100%;
 }
+
+/* -------------------- END Graphics -------------------- */
+
+/* -------------------- START Ranking -------------------- */
+
+.container_content2 {
+    width: 75%;
+    height: 100%;
+    background-color: #333333;
+}
+
+.box_ranking {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+ }
+
+.box_ranking {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    height: 250px;
+    border: 2px solid green;
+    gap: 50px;
+}
+
+/* -------------------- END Ranking -------------------- */
