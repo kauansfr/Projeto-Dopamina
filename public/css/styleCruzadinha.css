@@ -219,7 +219,7 @@ header {
     border: 10px 10px solid #FFFFFF;
     border-radius: 10px;
     border-style: groove;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: #2c2929;
     transform: scale(1.1);
     transition: 0.6s;
 }

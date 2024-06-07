@@ -20,6 +20,7 @@ header {
 }
 
 .box_logo {
+    cursor: pointer;
     width: 8rem;
     height: 7.5rem;
     transition: 0.45s;
@@ -46,16 +47,33 @@ header {
     height: 100vh;
 }
 
+.nomeBox{
+    background-color: #7e7e7e7c;
+    border-radius: 20px;
+    position: relative;
+    top: 100px;
+    width: 250px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    box-shadow: -1px 2px 3px 1px rgba(0, 0, 0, 0.288), inset 0px 0px 20px 10px rgba(0, 0, 0, 0.096);
+}
+
 .side_bar {
     width: 25%;
     height: 100%;
 }
 
+.side_bar p{
+    text-align: center;
+    font-size: 16px;
+}
+
 .side_bar h2 {
     position: relative;
-    top: 100px;
     text-align: center;
-    text-decoration-line: underline;
 }
 
 .options {
@@ -176,6 +194,13 @@ header {
 
 /* -------------------- START Dashboard -------------------- */
 
+
+.dashboard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .container_content1 {
     width: 75%; 
     height: 100%;
@@ -230,7 +255,7 @@ header {
 /* -------------------- START Graphics -------------------- */
 
 .containerGraphics1 {
-    width: 500px;
+    width: 800px;
     height: 100%;
 }
 
@@ -247,42 +272,68 @@ header {
 .box_ranking {
     display: flex;
     justify-content: center;
- }
-
-.box_ranking {
-    display: flex;
-    justify-content: center;
     flex-direction: row;
     align-items: center;
-    text-align: center;
     height: 100vh;
     border: 1px solid #ffffff46;
-    gap: 50px;
+    
 }
 .ranking {
     width: 500px;
     height: 500px;
     margin-bottom: 80px;
-    border: 5px groove #ffffff89;
+    border: 2px groove #ffffff89;
     border-radius: 10px 30px;
 }
 
 .ranking {
     display: flex;
     justify-content: space-around;
-    flex-direction: row;
-}
-
-.title_playerName {
-    padding-top: 30px;
-    font-weight: bold;
-    font-size: 20px;
+    flex-direction: column;
 }
 
 .title_rankingPosition {
-    padding-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     font-weight: bold;
     font-size: 20px;
+    border-bottom: 2px solid #ffffff89;
+    padding-bottom: 15px;
+}
+
+.titlePosition {
+    position: relative;
+    left: -25px;
+}
+
+.titleName {
+    position: relative;
+    right: 65px;
+}
+
+.container_positions {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-left: 50px;
+}
+
+.underlinePlayerName {
+    border-bottom: 2px solid #ffffff89;
+    width: 60%;
+    position: relative;
+    left: 140px;
+    height: 20px;
+    bottom: 10px;
+    text-align: center;
+}
+
+.container_positions h3 {
+    position: relative;
+    left: 50px;
+    font-size: 20px;
+    top: 10px;
 }
 
 

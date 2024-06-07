@@ -60,7 +60,7 @@ function cadastrarUsuario() {
     const sobrenome = input_sobrenome.value;
     const email = input_email.value;
     const senha = input_senha.value;
-    const despertaDopamina = input_despertaDopamina.value;
+    const despertaDopamina = select_despertaDopamina.value;
 
     if (validacoesCadastro()) {
         fetch("/usuarios/cadastrar", {

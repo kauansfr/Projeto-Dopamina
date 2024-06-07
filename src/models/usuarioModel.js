@@ -3,7 +3,7 @@ var database = require("../database/config")
 function coletarDadosTotais() {
     var instrucaoSql = `
     select
-        (select count(fkUsuario) from cruzadinha) as totalJogadores,
+        (select count(idUsuario) from usuario) as totalJogadores,
         (select round(avg(timestampdiff(second, inicio, conclusao))) from cruzadinha) as mediaTempoConclusao;
     `;
     console.log("Executando a instrução SQL: \n" + instrucaoSql);

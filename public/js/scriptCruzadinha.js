@@ -1,9 +1,6 @@
 function coletarIdCruzadinhaAtual() {
     fetch("/cruzadinha/coletarIdCruzadinhaAtual")
         .then(function (resposta) {
-            console.log("ESTOU NO THEN DO entrar()!");
-            console.log(resposta)
-
             if (resposta.ok) {
                 return resposta.json();
             } else {
@@ -11,7 +8,6 @@ function coletarIdCruzadinhaAtual() {
             }
         })
         .then(function (json) {
-            console.log("Dados recebidos:", json);
             sessionStorage.ID_CRUZADINHA_ATUAL = json.idCruzadinhaAtual;
         })
         .catch(function (erro) {
@@ -22,34 +18,30 @@ function coletarIdCruzadinhaAtual() {
 function inserirInicioCruzadinha() {
     const idUsuario = sessionStorage.ID_USUARIO;
 
-
-    console.log(idUsuario);
     fetch("/cruzadinha/inserirInicioCruzadinha", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
         },
         body: JSON.stringify({
-            // crie um atributo que recebe o valor recuperado aqui
-            // Agora vá para o arquivo routes/usuario.js
             idUsuarioServer: idUsuario
         }),
     })
-        .then(function (resposta) {
-
-            console.log("resposta: ", resposta);
-        })
-        .catch(function (resposta) {
-            console.log(`#ERRO: ${resposta}`);
-        });
+    .then(function (resposta) {
+        if (resposta.ok) {
+            coletarIdCruzadinhaAtual(); // Obtém o ID da cruzadinha atual após inseri-la
+        } else {
+            console.log("Erro ao inserir início da cruzadinha.");
+        }
+    })
+    .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+    });
 }
 
 function atualizarConclusaoCruzadinha() {
     const idUsuario = sessionStorage.ID_USUARIO;
     let idCruzadinhaAtual = sessionStorage.ID_CRUZADINHA_ATUAL;
-
-    console.log(`ID do usuário logado: ${idUsuario}`);
-    console.log(`ID da cruzadinha atual: ${idCruzadinhaAtual}`);
 
     fetch("/cruzadinha/atualizarConclusaoCruzadinha", {
         method: "PUT",
@@ -57,18 +49,40 @@ function atualizarConclusaoCruzadinha() {
             "Content-Type": "application/json",
         },
         body: JSON.stringify({
-            // crie um atributo que recebe o valor recuperado aqui
-            // Agora vá para o arquivo routes/usuario.js
             idUsuarioServer: idUsuario,
             idCruzadinhaAtualServer: idCruzadinhaAtual
         }),
     })
-        .then(function (resposta) {
-            console.log("resposta: ", resposta);
-        })
-        .catch(function (resposta) {
-            console.log(`#ERRO: ${resposta}`);
-        });
+    .then(function (resposta) {
+        if (resposta.ok) {
+            // Aqui você pode adicionar o código para registrar o resultado
+            registrarResultado();
+        } else {
+            console.log("Erro ao atualizar conclusão da cruzadinha.");
+        }
+    })
+    .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+    });
+}
+
+function registrarResultado() {
+    const idUsuario = sessionStorage.ID_USUARIO;
+    let idCruzadinhaAtual = sessionStorage.ID_CRUZADINHA_ATUAL;
+
+    fetch(`/cruzadinha/registrarResultado/${idUsuario}/${idCruzadinhaAtual}`, {
+        method: "POST"
+    })
+    .then(function (resposta) {
+        if (resposta.ok) {
+            console.log("Resultado registrado com sucesso!");
+        } else {
+            console.log("Erro ao registrar resultado.");
+        }
+    })
+    .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+    });
 }
 
 var special_words = ['DOPAMINA', 'RECEPTOR', 'GUIADO A OBJETIVO', 'MOTIVAÇÃO', '1000', 'SINAPSE QUÍMICA', 'HOMEOSTASE', 'SEXO', 'APERTAR O BOTÃO', 'NEUROTRANSMISSOR'];

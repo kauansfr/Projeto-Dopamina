@@ -15,4 +15,8 @@ router.put("/atualizarConclusaoCruzadinha", function (req, res) {
     cruzadinhaController.atualizarConclusaoCruzadinha(req, res);
 });
 
+router.post("/registrarResultado/:idUsuario/:idCruzadinhaAtual", function (req, res) {
+    cruzadinhaController.registrarResultado(req, res);
+});
+
 module.exports = router;
