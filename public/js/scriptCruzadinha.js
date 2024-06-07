@@ -1,3 +1,76 @@
+function coletarIdCruzadinhaAtual() {
+    fetch("/cruzadinha/coletarIdCruzadinhaAtual")
+        .then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!");
+            console.log(resposta)
+
+            if (resposta.ok) {
+                return resposta.json();
+            } else {
+                return console.log("Dados não coletados!");
+            }
+        })
+        .then(function (json) {
+            console.log("Dados recebidos:", json);
+            sessionStorage.ID_CRUZADINHA_ATUAL = json.idCruzadinhaAtual;
+        })
+        .catch(function (erro) {
+            console.error("Erro:", erro);
+        });
+}
+
+function inserirInicioCruzadinha() {
+    const idUsuario = sessionStorage.ID_USUARIO;
+
+
+    console.log(idUsuario);
+    fetch("/cruzadinha/inserirInicioCruzadinha", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            // crie um atributo que recebe o valor recuperado aqui
+            // Agora vá para o arquivo routes/usuario.js
+            idUsuarioServer: idUsuario
+        }),
+    })
+        .then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+        })
+        .catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+}
+
+function atualizarConclusaoCruzadinha() {
+    const idUsuario = sessionStorage.ID_USUARIO;
+    let idCruzadinhaAtual = sessionStorage.ID_CRUZADINHA_ATUAL;
+
+    console.log(`ID do usuário logado: ${idUsuario}`);
+    console.log(`ID da cruzadinha atual: ${idCruzadinhaAtual}`);
+
+    fetch("/cruzadinha/atualizarConclusaoCruzadinha", {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            // crie um atributo que recebe o valor recuperado aqui
+            // Agora vá para o arquivo routes/usuario.js
+            idUsuarioServer: idUsuario,
+            idCruzadinhaAtualServer: idCruzadinhaAtual
+        }),
+    })
+        .then(function (resposta) {
+            console.log("resposta: ", resposta);
+        })
+        .catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+}
+
 var special_words = ['DOPAMINA', 'RECEPTOR', 'GUIADO A OBJETIVO', 'MOTIVAÇÃO', '1000', 'SINAPSE QUÍMICA', 'HOMEOSTASE', 'SEXO', 'APERTAR O BOTÃO', 'NEUROTRANSMISSOR'];
 
 var questions_list = [
@@ -172,6 +245,9 @@ var heightTable = 17;
 var cont_correctAnswer = 0;
 
 function start() {
+    inserirInicioCruzadinha();
+    coletarIdCruzadinhaAtual();
+
     cont_correctAnswer = 0;
     bt_start.style.display = 'none';
     bt_destroyGame.style.display = 'block';
@@ -222,6 +298,7 @@ function gameSequence() {
     }
     else if (cont_correctAnswer == 10) {
         word.word10.write();
+
     }
 }
 
@@ -229,11 +306,11 @@ function gameSequence() {
 function pontuation() {
     div_information.style.display = 'block';
 
-    div_information.innerHTML = '<h1 style="text-align: center; padding-top: 150px">Parabéns!!!</h1><br><br><p style="text-align: center; text-decoration-line: underline; line-height: 10px;">Você finalizou o jogo</p><br><br>';
+    div_information.innerHTML = '<h1 style="text-align: center; padding-top: 150px"><b style="color: #FFD260">Parabéns!!!</b></h1><br><br><p style="text-align: center; text-decoration-line: underline; line-height: 10px;">Você finalizou o jogo</p><br><br>';
 }
 
 function renderGrid() {
-    var tableGame = '<table id="gridGame" cellspacing=0 cellpadding=0>';
+    var tableGame = '<table id="gridGame" cellspacing=1 cellpadding=0>';
 
     // &nbsp its used to set null value to a cell
     var cellContent_tableGame = '&nbsp';
@@ -280,25 +357,27 @@ function paintCells() {
 
 function verify() {
     var answer = input_answer.value;
+    var box_answer = document.getElementById('id_verifiedAnswer');
 
     if (answer != '') {
         answer = answer.toUpperCase();
 
         if (answer == special_words[cont_correctAnswer]) {
-            id_verifiedAnswer.classList.add('correctAnswer');
-            id_verifiedAnswer.innerHTML = '<br text-align: center;>Resposta Correta!';
+            // box_answer.style.backgroundColor = 'green;'
+            id_verifiedAnswer.innerHTML = `<div class="box_correctAnswer"><div class="correctAnswer">OOH YEAH, resposta correta!</div></div>`;
 
             if (cont_correctAnswer < 9) {
                 cont_correctAnswer++;
             } else {
                 setTimeout(function () {
+                    atualizarConclusaoCruzadinha();
                     destroyGrid();
                 }, 1500);
             }
         }
         else {
-            id_verifiedAnswer.classList.add('wrongAnswer');
-            id_verifiedAnswer.innerHTML = '<br text-align: center;>Resposta Incorreta, tente novamente';
+            box_answer.style.backgroundColor = 'red;'
+            id_verifiedAnswer.innerHTML = '<div class="box_wrongAnswer"><div class="wrongAnswer">Resposta incorreta, tente novamente!</div></div>';
         }
         setTimeout(function () {
             id_verifiedAnswer.style.display = 'block';

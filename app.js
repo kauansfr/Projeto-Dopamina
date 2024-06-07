@@ -21,6 +21,8 @@ var medidasRouter = require("./src/routes/medidas");
 var aquariosRouter = require("./src/routes/aquarios");
 var empresasRouter = require("./src/routes/empresas");
 var graficoRouter = require("./src/routes/grafico");
+var cruzadinhaRouter = require('./src/routes/cruzadinha');
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -34,6 +36,7 @@ app.use("/medidas", medidasRouter);
 app.use("/aquarios", aquariosRouter);
 app.use("/empresas", empresasRouter);
 app.use("/grafico", graficoRouter);
+app.use("/cruzadinha", cruzadinhaRouter);
 
 app.listen(PORTA_APP, function () {
     console.log(`

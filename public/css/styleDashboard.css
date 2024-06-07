@@ -86,7 +86,7 @@ header {
 .option_palavrasCruzadas:hover {
     border: 2px solid #FFFFFF;
     border-radius: 4px 15px;
-    background-color: rgb(255, 166, 0, 0.7);
+    background-color: #ffffff46;
     transform: scale(1.05);
     transition: 0.5s;
 }
@@ -112,7 +112,7 @@ header {
 .option_dashboard:hover {
     border: 2px solid #FFFFFF;
     border-radius: 4px 15px;
-    background-color: rgb(255, 166, 0, 0.7);
+    background-color: #ffffff46;
     transform: scale(1.05);
     transition: 0.5s;
 }
@@ -138,7 +138,7 @@ header {
 .option_ranking:hover {
     border: 2px solid #FFFFFF;
     border-radius: 4px 15px;
-    background-color: rgb(255, 166, 0, 0.7);
+    background-color: #ffffff46;
     transform: scale(1.05);
     transition: 0.5s;
 }
@@ -163,7 +163,7 @@ header {
 .option_logout:hover {
     border: 2px solid #FFFFFF;
     border-radius: 4px 15px;
-    background-color: rgb(255, 166, 0, 0.7);
+    background-color: #ffffff46;
     transform: scale(1.05);
     transition: 0.5s;
 }
@@ -180,6 +180,7 @@ header {
     width: 75%; 
     height: 100%;
     background-color: #333333;
+    border: 1px solid #ffffff46;
 }
 
 .container_players {
@@ -189,7 +190,6 @@ header {
     align-items: center;
     text-align: center;
     height: 250px;
-    border: 2px solid green;
     gap: 50px;
 }
 
@@ -240,14 +240,13 @@ header {
 
 .container_content2 {
     width: 75%;
-    height: 100%;
+    height: 100vh;
     background-color: #333333;
 }
 
 .box_ranking {
     display: flex;
     justify-content: center;
-    height: 100%;
  }
 
 .box_ranking {
@@ -256,9 +255,36 @@ header {
     flex-direction: row;
     align-items: center;
     text-align: center;
-    height: 250px;
-    border: 2px solid green;
+    height: 100vh;
+    border: 1px solid #ffffff46;
     gap: 50px;
 }
+.ranking {
+    width: 500px;
+    height: 500px;
+    margin-bottom: 80px;
+    border: 5px groove #ffffff89;
+    border-radius: 10px 30px;
+}
+
+.ranking {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.title_playerName {
+    padding-top: 30px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.title_rankingPosition {
+    padding-top: 30px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
 
 /* -------------------- END Ranking -------------------- */

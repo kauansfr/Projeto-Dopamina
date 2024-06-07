@@ -1,6 +1,7 @@
 * {
     padding: 0rem;
     margin: 0rem;
+    font-family: 'Flow Ext', sans-serif;
 }
 
 body {
@@ -51,7 +52,7 @@ header {
 }
 
 .nav_menu a {
-    margin: 40px;
+    margin: 50px;
     text-decoration: none;
     color: #000000;
     transition: 0.5s;
@@ -120,7 +121,8 @@ header {
     height: 10px;
     border: 1.7px solid #000000;
     border-radius: 10px 10px;
-}
+    padding-inline: 10px;
+    }
 
 #titulo_input,
 #titulo_select,

@@ -119,6 +119,7 @@ header {
     top: 10px;
     padding-bottom: 12px;
     padding-top: 16px;
+    padding-inline: 15px;
     border-radius: 10px 10px;
 }
 

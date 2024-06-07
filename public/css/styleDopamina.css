@@ -26,7 +26,7 @@ body {
 }
 
 body {
-    height: 400rem;
+    height: 380rem;
 }
 
 /* -------------------- Header -------------------- */
@@ -63,7 +63,8 @@ header {
 
 .nav_menu {
     position: relative;
-    right: -10rem;
+    right: -15rem;
+    gap: 40px;
     transition: 0.45s;
 }
 

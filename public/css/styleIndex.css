@@ -130,7 +130,7 @@ body {
     }
 }
 
-.box_dopamina {
+.box_entenda {
     display: none;
     justify-content: center;
     position: relative;
@@ -140,12 +140,12 @@ body {
     z-index: 2;
 }
 
-.box_dopamina {
+.box_entenda {
     transition: transform 2s ease;
     animation: opacity 1.5s ease;
 }
 
-.div_dopamina {
+.div_entenda {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -159,14 +159,14 @@ body {
     cursor: pointer;
 }
 
-.text_Dopamina {
+.text_entenda {
     font-weight: bold;
     font-weight: bold;
     text-align: left;
     width: 55%;
 }
 
-.div_dopamina:hover {
+.div_entenda:hover {
     background-color: rgba(255, 165, 0, 0.749);
     font-size: 21.5px;
     color: #FFFFFF;
@@ -177,7 +177,7 @@ body {
 
 /* -------------------- Segunda Div -------------------- */
 
-.box_atividadeFisica {
+.box_comoFunciona {
     display: none;
     justify-content: center;
     position: relative;
@@ -188,12 +188,12 @@ body {
     width: 70rem;
 }
 
-.box_atividadeFisica {
+.box_comoFunciona {
     transition: transform 2s ease;
     animation: opacity 1.5s ease;
 }
 
-.div_atividadeFisica {
+.div_comoFunciona {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -208,14 +208,14 @@ body {
     cursor: pointer;
 }
 
-.text_Exercicio {
+.text_comoFunciona {
     font-size: 20px;
     font-weight: bold;
     text-align: right;
     width: 65%;
 }
 
-.div_atividadeFisica:hover {
+.div_comoFunciona:hover {
     background-color: rgba(2, 184, 2, 0.75);
     font-size: 21.5px;
     color: #FFFFFF;
@@ -226,7 +226,7 @@ body {
 
 /* -------------------- Terceira Div -------------------- */
 
-.box_controleRotina {
+.box_sua {
     display: none;
     justify-content: center;
     position: relative;
@@ -236,12 +236,12 @@ body {
     z-index: 2;
 }
 
-.box_controleRotina {
+.box_sua {
     transition: transform 2s ease;
     animation: opacity 1.5s ease;
 }
 
-.div_controleRotina {
+.div_sua {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -253,14 +253,14 @@ body {
     cursor: pointer;
 }
 
-.text_Rotina {
+.text_sua {
     font-size: 20px;
     text-align: left;
     font-weight: bold;
     width: 47%;
 }
 
-.div_controleRotina:hover {
+.div_sua:hover {
     background-color: rgba(128, 0, 128, 0.75);
     text-shadow: 2px 2px 3px #414141;
     font-size: 21.5px;
@@ -271,7 +271,7 @@ body {
 
 /* -------------------- Terceira Div -------------------- */
 
-.box_sobreMim {
+.box_dopamina {
     display: none;
     justify-content: center;
     position: relative;
@@ -282,12 +282,12 @@ body {
     width: 40rem;
 }
 
-.box_sobreMim {
+.box_dopamina {
     transition: transform 2s ease;
     animation: opacity 1.5s ease;
 }
 
-.div_sobreMim {
+.div_dopamina {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -300,14 +300,14 @@ body {
     cursor: pointer;
 }
 
-.text_sobreMim {
+.text_dopamina {
     font-size: 20px;
     font-weight: bold;
     text-align: right;
     width: 65%;
 }
 
-.div_sobreMim:hover {
+.div_dopamina:hover {
     background-color: rgba(0, 127, 255, 0.75);
     font-size: 21.5px;
     color: #FFFFFF;

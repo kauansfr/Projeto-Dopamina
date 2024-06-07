@@ -11,16 +11,14 @@
 
 <body>
     <header>
-        <div class="box_logo">
+        <div class="box_logo" onclick="acessarLogin()">
             <img src="./assets/icon/logo-Dopamine-se.png">
         </div>
 
         <nav class="nav_menu">
-            <a id="id_home" href="./index.html">Home</a>
-            <a id="id_dopamina" href="#">Dopamina</a>
-            <a id="id_atvFisica" href="#">Atv. Física</a>
-            <a id="id_rotina" href="#">Rotina</a>
-            <a id="id_sobreMim" href="#">Sobre Mim</a>
+            <a href="./index.html">Home</a>
+            <a href="./dopamina.html">Dopamina</a>
+            <a href="./cruzadinha.html">Palavras Cruzadas</a>
         </nav>
 
         <div class="box_login">
@@ -44,7 +42,7 @@
                     Hormônio da Prazer?</h2>
                 <p class="subtitle_aside">A dopamina é um neurotransmissor que tem como função levar informações ao
                     sistema nervoso e diversas partes do corpo, atuando em processos cognitivos como o aumento dos
-                    níveis de memória e atenção, além disso, é erroneamente conhecida por ser um dos hormônios do 
+                    níveis de memória e atenção, além disso, é erroneamente conhecida por ser um dos hormônios do
                     prazer, que por sua vez, é uma definição precipitada, tendo em vista que a dopamina está ligada
                     a motivação e recompensa. Mas, antes de entrarmos afundo sobre a ligação da dopamina e a motivação,
                     vamos entender como esse neurotransmissor atua no nosso cerébro.</p>
@@ -208,7 +206,8 @@
             <p>Primeiramente, os ensinaram randomicamente que daquele bico saía suco de maça, com o objetivo de
                 fazê-los entender que dali sairia algo prazeroso. Logo após, passaram a ensiná-los que quando a luz
                 acendesse, eles iriam receber o suco. Por fim, ensinaram que ao acender a luz, os macacos deveriam
-                pressionar 10 vezes o botão, de forma correta e específica, que lhês foi ensinado através de repetição durante a
+                pressionar 10 vezes o botão, de forma correta e específica, que lhês foi ensinado através de repetição
+                durante a
                 pesquisa, para receber o suco de maça.</p>
 
             <h3>- Descoberta</h3>
@@ -227,17 +226,28 @@
             <div class="gatilho_acao_recompensa">
                 — <b>LUZ</b> que leva a <b>PRESSIONAR ALAVANCA 10x</b> que leva a <b>LIBERAÇÃO DE SUCO</b> —
                 <br>— <b>GATILHO</b> que leva a <b>AÇÃO</b> que leva a <b>RECOMPENSA</b> —
-                <br>— <b>DOPAMINA</b> que leva a <b>MOTIVAÇÃO</b> que leva a <b>LUZ</b> que leva a <b>POSSIBILIDADE DE GANHAR SUCO</b> —
+                <br>— <b>DOPAMINA</b> que leva a <b>MOTIVAÇÃO</b> que leva a <b>LUZ</b> que leva a <b>POSSIBILIDADE DE
+                    GANHAR SUCO</b> —
             </div>
         </div>
 
         <div class="qualSeuSuco">
-            <h2>Qual o seu suco?</h2>
+            <h2 style="font-size: 28px;">Qual é o seu suco?</h2>
 
-            <p>Os macaquinhos só apertavam o botão/realizavam o esforço, porque no inicio do estudo, lhês foi apresentado qual era a recompensa de tal trabalho. Uma vez que entendemos que até um macaco precisa saber qual a recompensa para realizar um determinado comportamento que exige esforço, eu te pergunto: Qual o seu suco?</p>
+            <p style="font-weight: bold;">Os macaquinhos só apertavam o botão porque no inicio do estudo, lhês foi
+                apresentado qual era a recompensa de tal trabalho. Quando entendemos que até um macaco precisa saber
+                qual a recompensa para realizar um determinado comportamento que exige esforço, eu te pergunto:
+                <br><br><br>
+            <p style="color: #FF9900; font-size: 18px; font-weight: bold;">- Qual é o seu suco?</p>
+            </p>
 
-            <p>É extremamente mais custoso, fisiologicamente e mentalmente, executar um esforço sem saber a recompensa que você busca!
-                Se não mostrassem a recompensa, eles não apertariam o botão quando a luz acendesse.
+            <p>É extremamente mais custoso, fisiologicamente e mentalmente, executar um esforço sem saber a recompensa
+                que você busca!
+                Quando falamos de recompensas a longo prazo e disciplina, devemos procurar alinhar o que é nossa "Luz" -
+                aquilo que quando enxergamos ou lembramos, nos desperta motivação e traz sentido ao esforço que
+                realizamos - o nosso "apertar o botão" - trabalho, sendo ele o comportamento que exige esforço e tempo
+                da sua parte - e nosso "Suco" - a recompensa que apesar do esforço e tempo necessário, o faz manter-se
+                direcionado ao objetivo.
             </p>
         </div>
 
@@ -245,3 +255,9 @@
 </body>
 
 </html>
+
+<script>
+    function acessarLogin() {
+        window.location.href = './login.html';
+    }
+</script>

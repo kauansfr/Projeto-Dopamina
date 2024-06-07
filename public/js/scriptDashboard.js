@@ -1,6 +1,46 @@
 const container_dashboard = document.querySelector('.container_content1');
 const container_ranking = document.querySelector('.container_content2');
 
+function coletarRanking() {
+    const nome = input_nome.value;
+    const sobrenome = input_sobrenome.value;
+    const email = input_email.value;
+    const senha = input_senha.value;
+    const despertaDopamina = input_despertaDopamina.value;
+
+    if (validacoesCadastro()) {
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nome,
+                sobrenomeServer: sobrenome,
+                emailServer: email,
+                senhaServer: senha,
+                despertaDopaminaServer: despertaDopamina
+            }),
+        })
+            .then(function (resposta) {
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok) {
+                    setTimeout(() => {
+                        window.location = "login.html";
+                    }, "2000");
+                } else {
+                    throw "Houve um erro ao tentar realizar o cadastro!";
+                }
+            })
+            .catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+            });
+    }
+}
+
 function aparecerDashboard() {
     container_dashboard.style.display = 'block';
     container_ranking.style.display = 'none';
@@ -22,8 +62,7 @@ function totalJogadores() {
             if (resposta.ok) {
                 return resposta.json();
             } else {
-                console.log("Dados não coletados!");
-                return Promise.reject("Erro na resposta da API");
+                return console.log("Dados não coletados!");
             }
         })
         .then(function (json) {

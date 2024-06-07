@@ -1,8 +1,12 @@
 const listaNumerosValidacao = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 const quantidadeNumerosValidacao = listaNumerosValidacao.length;
 
+function acessarIndex() {
+    window.location.href = './index.html';
+}
+
 function acessarLogin() {
-    window.location.href = './login.html'
+    window.location.href = './login.html';
 }
 
 function validacoesCadastro() {

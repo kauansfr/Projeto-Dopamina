@@ -1,8 +1,8 @@
 const cerebro = document.querySelector('.brain_img');
+const entenda = document.querySelector('.box_entenda');
+const comoFunciona = document.querySelector('.box_comoFunciona');
+const div_sua = document.querySelector('.box_sua');
 const dopamina = document.querySelector('.box_dopamina');
-const atividadeFisica = document.querySelector('.box_atividadeFisica');
-const rotina = document.querySelector('.box_controleRotina');
-const sobreMim = document.querySelector('.box_sobreMim');
 const buttonLogin = document.getElementById('button_login');
 
 let controleAbrirFechar = true;
@@ -12,10 +12,10 @@ function aparecerDivs() {
     if (controleAbrirFechar) {
         controleAbrirFechar = false;
 
+        entenda.style.display = 'flex';
+        comoFunciona.style.display = 'flex';
+        div_sua.style.display = 'flex';
         dopamina.style.display = 'flex';
-        atividadeFisica.style.display = 'flex';
-        rotina.style.display = 'flex';
-        sobreMim.style.display = 'flex';
         setTimeout(animacaoDivsAbrir, 1);
 
         desacelerarPulse_Cerebro();
@@ -24,34 +24,30 @@ function aparecerDivs() {
         animacaoDivsFechar();
 
         setTimeout(function () {
+            entenda.style.display = 'none';
+            comoFunciona.style.display = 'none';
+            div_sua.style.display = 'none';
             dopamina.style.display = 'none';
-            atividadeFisica.style.display = 'none';
-            rotina.style.display = 'none';
-            sobreMim.style.display = 'none';
         }, 550);
 
         acelerarPulse_Cerebro();
     }
 }
 
-function sumirDopamina() {
-
-}
-
 function animacaoDivsAbrir() {
-    dopamina.style.transform = 'translateX(-12rem)';
-    atividadeFisica.style.transform = 'translateX(12rem)';
-    rotina.style.transform = 'translateX(-12rem)';
-    sobreMim.style.transform = 'translateX(12rem)';
+    entenda.style.transform = 'translateX(-12rem)';
+    comoFunciona.style.transform = 'translateX(12rem)';
+    div_sua.style.transform = 'translateX(-12rem)';
+    dopamina.style.transform = 'translateX(12rem)';
     buttonLogin.style.transform = 'translateX(-1%)';
 
 }
 
 function animacaoDivsFechar() {
-    dopamina.style.transform = 'translateX(12rem)';
-    atividadeFisica.style.transform = 'translateX(-12rem)';
-    rotina.style.transform = 'translateX(12rem)';
-    sobreMim.style.transform = 'translateX(-12rem)';
+    entenda.style.transform = 'translateX(12rem)';
+    comoFunciona.style.transform = 'translateX(-12rem)';
+    div_sua.style.transform = 'translateX(12rem)';
+    dopamina.style.transform = 'translateX(-12rem)';
     buttonLogin.style.transform = 'translateX(6%)';
 }
 
